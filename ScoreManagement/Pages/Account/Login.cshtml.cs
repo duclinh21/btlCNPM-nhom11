@@ -38,7 +38,12 @@ namespace ScoreManagement.Pages.Account
                     }
                     else if (account.Role == "STUDENT")
                     {
-                        return RedirectToPage("/StudentDashboard");
+                        // Lấy thông tin sinh viên dựa trên AccountId
+                        var student = _context.Students.SingleOrDefault(s => s.AccountId == account.AccountId);
+                        if (student != null)
+                        {
+                            return RedirectToPage("/Student/StudentDashboard", new { studentId = student.StudentId });
+                        }
                     }
                 }
                 ModelState.AddModelError(string.Empty, "Invalid login attempt.");

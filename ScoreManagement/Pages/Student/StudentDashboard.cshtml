@@ -1,0 +1,45 @@
+﻿@page
+@model ScoreManagement.Pages.Student.StudentDashboardModel
+@{
+}
+@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<h2>Grade Report for @Model.FullName (@Model.StudentCode)</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Semester</th>
+            <th>Course</th>
+            <th>Assignment 1</th>
+            <th>Assignment 2</th>
+            <th>Assignment 3</th>
+            <th>Progress Test 1</th>
+            <th>Progress Test 2</th>
+            <th>Progress Test 3</th>
+            <th>Final Exam</th>
+            <th>Average Score</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var report in Model.StudentReports)
+        {
+            <tr>
+                <td>@report.SemesterCode</td>
+                <td>@report.CourseName</td>
+                <td>@report.Assignment1</td>
+                <td>@report.Assignment2</td>
+                <td>@report.Assignment3</td>
+                <td>@report.ProgressTest1</td>
+                <td>@report.ProgressTest2</td>
+                <td>@report.ProgressTest3</td>
+                <td>@report.FinalExam</td>
+                <td>@report.AverageScore</td>
+                <td>@report.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>

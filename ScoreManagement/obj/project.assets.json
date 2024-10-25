@@ -2379,19 +2379,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\Tram Oanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MediumC#\\ScoreManagement_ProjectPRN221\\ScoreManagement\\ScoreManagement.csproj",
+      "projectUniqueName": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
       "projectName": "ScoreManagement",
-      "projectPath": "D:\\MediumC#\\ScoreManagement_ProjectPRN221\\ScoreManagement\\ScoreManagement.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\MediumC#\\ScoreManagement_ProjectPRN221\\ScoreManagement\\obj\\",
+      "projectPath": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+      "packagesPath": "C:\\Users\\Tram Oanh\\.nuget\\packages\\",
+      "outputPath": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tram Oanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2399,6 +2399,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2411,6 +2412,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2451,7 +2457,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
