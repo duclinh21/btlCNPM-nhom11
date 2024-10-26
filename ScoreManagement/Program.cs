@@ -34,7 +34,7 @@ namespace ScoreManagement
             app.MapRazorPages();
             app.MapGet("/", context =>
             {
-                context.Response.Redirect("/Account/Login");
+                context.Response.Redirect("/AccountLogin/Login");
                 return Task.CompletedTask;
             });
             app.Run();

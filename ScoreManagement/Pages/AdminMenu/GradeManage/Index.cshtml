@@ -1,0 +1,95 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.GradeManage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].StudentCourse.Student.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].Assignment1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].Assignment2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].Assignment3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].ProgressTest1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].ProgressTest2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].ProgressTest3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].FinalExam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].AverageScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade[0].Status) <!-- Hiển thị trạng thái đã tính -->
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Grade)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentCourse.Student.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assignment1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assignment2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assignment3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgressTest1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgressTest2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProgressTest3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FinalExam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AverageScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status) <!-- Hiển thị trạng thái Pass/Fail -->
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.GradeId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.GradeId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.GradeId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

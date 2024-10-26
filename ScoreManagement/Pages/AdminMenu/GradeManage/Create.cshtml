@@ -1,0 +1,69 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.GradeManage.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Grade</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Grade.StudentCourseId" class="control-label"></label>
+                <select asp-for="Grade.StudentCourseId" class ="form-control" asp-items="ViewBag.StudentCourseId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.Assignment1" class="control-label"></label>
+                <input asp-for="Grade.Assignment1" class="form-control" />
+                <span asp-validation-for="Grade.Assignment1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.Assignment2" class="control-label"></label>
+                <input asp-for="Grade.Assignment2" class="form-control" />
+                <span asp-validation-for="Grade.Assignment2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.Assignment3" class="control-label"></label>
+                <input asp-for="Grade.Assignment3" class="form-control" />
+                <span asp-validation-for="Grade.Assignment3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.ProgressTest1" class="control-label"></label>
+                <input asp-for="Grade.ProgressTest1" class="form-control" />
+                <span asp-validation-for="Grade.ProgressTest1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.ProgressTest2" class="control-label"></label>
+                <input asp-for="Grade.ProgressTest2" class="form-control" />
+                <span asp-validation-for="Grade.ProgressTest2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.ProgressTest3" class="control-label"></label>
+                <input asp-for="Grade.ProgressTest3" class="form-control" />
+                <span asp-validation-for="Grade.ProgressTest3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grade.FinalExam" class="control-label"></label>
+                <input asp-for="Grade.FinalExam" class="form-control" />
+                <span asp-validation-for="Grade.FinalExam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,79 @@
+﻿@page
+@model ScoreManagement.Pages.StudentsManage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].StudentCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Dob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Account)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Student[0].Major)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Student) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                    @item.Dob?.ToString("dd/MM/yyyy")
+            </td>
+            <td>
+                @(item.Gender == true ? "Nam" : item.Gender == false ? "Nữ" : "Không xác định")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Major.MajorName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.StudentId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.StudentId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.StudentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
