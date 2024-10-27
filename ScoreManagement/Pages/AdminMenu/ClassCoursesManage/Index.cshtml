@@ -30,13 +30,13 @@
 @foreach (var item in Model.ClassCourse) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Class.ClassId)
+                @Html.DisplayFor(modelItem => item.Class.ClassCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Course.CourseId)
+                @Html.DisplayFor(modelItem => item.Course.CourseName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lecturer.LecturerId)
+                @Html.DisplayFor(modelItem => item.Lecturer.LecturerName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ClassCourseId">Edit</a> |

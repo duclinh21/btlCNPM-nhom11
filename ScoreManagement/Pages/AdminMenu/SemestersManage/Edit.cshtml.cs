@@ -47,6 +47,26 @@ namespace ScoreManagement.Pages.AdminMenu.SemestersManage
                 return Page();
             }
 
+            // Kiểm tra trùng lặp SemesterCode
+            bool isDuplicateCode = await _context.Semesters
+                .AnyAsync(s => s.SemesterCode == Semester.SemesterCode && s.SemesterId != Semester.SemesterId);
+
+            if (isDuplicateCode)
+            {
+                ModelState.AddModelError("Semester.SemesterCode", "Mã học kỳ đã tồn tại. Vui lòng chọn mã khác.");
+                return Page();
+            }
+
+            // Kiểm tra trùng lặp StartDate hoặc EndDate
+            bool isDuplicateDate = await _context.Semesters
+                .AnyAsync(s => (s.StartDate == Semester.StartDate || s.EndDate == Semester.EndDate) && s.SemesterId != Semester.SemesterId);
+
+            if (isDuplicateDate)
+            {
+                ModelState.AddModelError(string.Empty, "Ngày bắt đầu hoặc ngày kết thúc đã tồn tại. Vui lòng chọn ngày khác.");
+                return Page();
+            }
+
             _context.Attach(Semester).State = EntityState.Modified;
 
             try
@@ -67,6 +87,7 @@ namespace ScoreManagement.Pages.AdminMenu.SemestersManage
 
             return RedirectToPage("./Index");
         }
+
 
         private bool SemesterExists(int id)
         {

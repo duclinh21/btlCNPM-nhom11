@@ -23,13 +23,13 @@
             @Html.DisplayNameFor(model => model.Semester.StartDate)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Semester.StartDate)
+            @Model.Semester.StartDate?.ToString("dd/MM/yyyy")
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Semester.EndDate)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Semester.EndDate)
+            @Model.Semester.EndDate?.ToString("dd/MM/yyyy")
         </dd>
     </dl>
     

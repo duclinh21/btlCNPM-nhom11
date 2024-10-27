@@ -33,10 +33,10 @@
                 @Html.DisplayFor(modelItem => item.SemesterCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
+                    @item.StartDate?.ToString("dd/MM/yyyy")
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
+                    @item.EndDate?.ToString("dd/MM/yyyy")
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.SemesterId">Edit</a> |

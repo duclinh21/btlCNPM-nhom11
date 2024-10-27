@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using ScoreManagement.Models;
 
 namespace ScoreManagement.Pages.AdminMenu.SemestersManage
@@ -25,13 +26,32 @@ namespace ScoreManagement.Pages.AdminMenu.SemestersManage
 
         [BindProperty]
         public Semester Semester { get; set; } = default!;
-        
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Semesters == null || Semester == null)
+            if (!ModelState.IsValid || _context.Semesters == null || Semester == null)
             {
+                return Page();
+            }
+
+            // Kiểm tra trùng lặp SemesterCode
+            bool isDuplicateCode = await _context.Semesters
+                .AnyAsync(s => s.SemesterCode == Semester.SemesterCode);
+
+            if (isDuplicateCode)
+            {
+                ModelState.AddModelError("Semester.SemesterCode", "Mã học kỳ đã tồn tại. Vui lòng chọn mã khác.");
+                return Page();
+            }
+
+            // Kiểm tra trùng lặp StartDate và EndDate
+            bool isDuplicateDates = await _context.Semesters
+                .AnyAsync(s => s.StartDate == Semester.StartDate || s.EndDate == Semester.EndDate);
+
+            if (isDuplicateDates)
+            {
+                ModelState.AddModelError(string.Empty, "Ngày bắt đầu và ngày kết thúc đã tồn tại. Vui lòng chọn ngày khác.");
                 return Page();
             }
 

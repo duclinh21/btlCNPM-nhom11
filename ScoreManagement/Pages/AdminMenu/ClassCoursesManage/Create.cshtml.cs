@@ -20,9 +20,9 @@ namespace ScoreManagement.Pages.AdminMenu.ClassCoursesManage
 
         public IActionResult OnGet()
         {
-        ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassId");
-        ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseId");
-        ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerId");
+        ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassCode");
+        ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName");
+        ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerName");
             return Page();
         }
 
