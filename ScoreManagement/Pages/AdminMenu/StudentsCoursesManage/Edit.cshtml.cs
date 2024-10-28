@@ -35,11 +35,11 @@ namespace ScoreManagement.Pages.AdminMenu.StudentsCoursesManage
                 return NotFound();
             }
             StudentsCourse = studentscourse;
-           ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassId");
-           ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseId");
-           ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerId");
-           ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterId");
-           ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId");
+           ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassCode");
+           ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName");
+           ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerName");
+           ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterCode");
+           ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentCode");
             return Page();
         }
 

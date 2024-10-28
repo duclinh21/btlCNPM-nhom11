@@ -20,8 +20,17 @@ namespace ScoreManagement.Pages.AdminMenu.StudentClassesManage
 
         public IActionResult OnGet()
         {
-        ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassId");
-        ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId");
+            // Lấy danh sách ID học sinh đã được gán vào lớp
+            var assignedStudentIds = _context.StudentClasses.Select(sc => sc.StudentId).ToList();
+
+            // Lọc học sinh chưa được gán vào lớp
+            var availableStudents = _context.Students
+                                             .Where(s => !assignedStudentIds.Contains(s.StudentId))
+                                             .ToList();
+
+            ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassCode");
+            ViewData["StudentId"] = new SelectList(availableStudents, "StudentId", "StudentCode");
+
             return Page();
         }
 

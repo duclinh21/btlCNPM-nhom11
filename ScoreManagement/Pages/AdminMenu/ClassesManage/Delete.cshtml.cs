@@ -28,7 +28,9 @@ namespace ScoreManagement.Pages.AdminMenu.ClassesManage
                 return NotFound();
             }
 
-            var selectedClass = await _context.Classes.FirstOrDefaultAsync(m => m.ClassId == id);
+            var selectedClass = await _context.Classes
+                .Include(s => s.Semester)
+                .FirstOrDefaultAsync(m => m.ClassId == id);
 
             if (selectedClass == null)
             {

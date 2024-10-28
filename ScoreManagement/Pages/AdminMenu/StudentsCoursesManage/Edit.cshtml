@@ -16,6 +16,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="StudentsCourse.StudentCourseId" />
             <div class="form-group">
+                <label asp-for="StudentsCourse.ClassId" class="control-label"></label>
+                <select asp-for="StudentsCourse.ClassId" class="form-control" asp-items="ViewBag.ClassId"></select>
+                <span asp-validation-for="StudentsCourse.ClassId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="StudentsCourse.StudentId" class="control-label"></label>
                 <select asp-for="StudentsCourse.StudentId" class="form-control" asp-items="ViewBag.StudentId"></select>
                 <span asp-validation-for="StudentsCourse.StudentId" class="text-danger"></span>
@@ -24,11 +29,6 @@
                 <label asp-for="StudentsCourse.CourseId" class="control-label"></label>
                 <select asp-for="StudentsCourse.CourseId" class="form-control" asp-items="ViewBag.CourseId"></select>
                 <span asp-validation-for="StudentsCourse.CourseId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StudentsCourse.ClassId" class="control-label"></label>
-                <select asp-for="StudentsCourse.ClassId" class="form-control" asp-items="ViewBag.ClassId"></select>
-                <span asp-validation-for="StudentsCourse.ClassId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="StudentsCourse.SemesterId" class="control-label"></label>

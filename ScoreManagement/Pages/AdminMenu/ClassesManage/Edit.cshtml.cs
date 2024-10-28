@@ -35,7 +35,7 @@ namespace ScoreManagement.Pages.AdminMenu.ClassesManage
                 return NotFound();
             }
             Class = selectedClass;
-            ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterId");
+            ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterCode");
             return Page();
         }
 

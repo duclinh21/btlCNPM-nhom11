@@ -20,7 +20,7 @@ namespace ScoreManagement.Pages.AdminMenu.ClassesManage
 
         public IActionResult OnGet()
         {
-        ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterId");
+        ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterCode");
             return Page();
         }
 

@@ -29,16 +29,31 @@ namespace ScoreManagement.Pages.AdminMenu.StudentClassesManage
                 return NotFound();
             }
 
-            var studentclass =  await _context.StudentClasses.FirstOrDefaultAsync(m => m.StudentClassId == id);
+            var studentclass = await _context.StudentClasses.FirstOrDefaultAsync(m => m.StudentClassId == id);
             if (studentclass == null)
             {
                 return NotFound();
             }
+
             StudentClass = studentclass;
-           ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassId");
-           ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId");
+
+            // Lấy danh sách ID của các học sinh đã được gán vào lớp, ngoại trừ học sinh hiện tại
+            var assignedStudentIds = _context.StudentClasses
+                                             .Where(sc => sc.StudentClassId != id)
+                                             .Select(sc => sc.StudentId)
+                                             .ToList();
+
+            // Lọc các học sinh chưa được gán hoặc là học sinh hiện tại
+            var availableStudents = _context.Students
+                                             .Where(s => !assignedStudentIds.Contains(s.StudentId) || s.StudentId == studentclass.StudentId)
+                                             .ToList();
+
+            ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassCode");
+            ViewData["StudentId"] = new SelectList(availableStudents, "StudentId", "StudentCode");
+
             return Page();
         }
+
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.

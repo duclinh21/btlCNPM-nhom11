@@ -15,19 +15,22 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.StudentsCourse[0].StudentCourseId)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.StudentsCourse[0].Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentsCourse[0].Student)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.StudentsCourse[0].Course)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StudentsCourse[0].Lecturer)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.StudentsCourse[0].Semester)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StudentsCourse[0].Student)
+                @Html.DisplayNameFor(model => model.StudentsCourse[0].Lecturer)
             </th>
             <th></th>
         </tr>
@@ -36,19 +39,22 @@
 @foreach (var item in Model.StudentsCourse) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Class.ClassId)
+                    @Html.DisplayFor(modelItem => item.StudentCourseId)
+             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class.ClassCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Course.CourseId)
+                 @Html.DisplayFor(modelItem => item.Student.StudentCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lecturer.LecturerId)
+                @Html.DisplayFor(modelItem => item.Course.CourseName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Semester.SemesterId)
+                @Html.DisplayFor(modelItem => item.Semester.SemesterCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Student.StudentId)
+                 @Html.DisplayFor(modelItem => item.Lecturer.LecturerName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.StudentCourseId">Edit</a> |

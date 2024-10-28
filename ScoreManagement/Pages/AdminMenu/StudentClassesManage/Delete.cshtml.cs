@@ -28,7 +28,10 @@ namespace ScoreManagement.Pages.AdminMenu.StudentClassesManage
                 return NotFound();
             }
 
-            var studentclass = await _context.StudentClasses.FirstOrDefaultAsync(m => m.StudentClassId == id);
+            var studentclass = await _context.StudentClasses
+                .Include(s => s.Class)
+                .Include(s => s.Student)
+                .FirstOrDefaultAsync(m => m.StudentClassId == id);
 
             if (studentclass == null)
             {
