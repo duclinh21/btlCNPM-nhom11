@@ -4,6 +4,8 @@
     {
         public string? SemesterCode { get; set; }
         public string? CourseName { get; set; }
+
+        public string? CourseCode { get; set; }
         public double? Assignment1 { get; set; }
         public double? Assignment2 { get; set; }
         public double? Assignment3 { get; set; }

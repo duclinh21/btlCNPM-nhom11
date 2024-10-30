@@ -6,41 +6,141 @@
     ViewData["Title"] = "Student Dashboard";
     Layout = null;
 }
+<head>
+    
 
-<h2>Grade Report for @Model.FullName (@Model.StudentCode)</h2>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Semester</th>
-            <th>Course</th>
-            <th>Assignment 1</th>
-            <th>Assignment 2</th>
-            <th>Assignment 3</th>
-            <th>Progress Test 1</th>
-            <th>Progress Test 2</th>
-            <th>Progress Test 3</th>
-            <th>Final Exam</th>
-            <th>Average Score</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var report in Model.StudentReports)
-        {
-            <tr>
-                <td>@report.SemesterCode</td>
-                <td>@report.CourseName</td>
-                <td>@report.Assignment1</td>
-                <td>@report.Assignment2</td>
-                <td>@report.Assignment3</td>
-                <td>@report.ProgressTest1</td>
-                <td>@report.ProgressTest2</td>
-                <td>@report.ProgressTest3</td>
-                <td>@report.FinalExam</td>
-                <td>@report.AverageScore</td>
-                <td>@report.Status</td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+
+</head>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <br />
+    <h1 class="h3 mb-2 text-gray-800">Grade Report for @Model.FullName (@Model.StudentCode)</h1>
+    <p class="mb-4">
+        Below is the detailed grade report for each course and assessment component for the selected student.
+    </p>
+
+    <!-- Grade Report Table Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Student Grade Report</h6>
+        </div>
+        <div class="card-body">
+
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <label for="semesterFilter">Filter by Semester:</label>
+                    <select id="semesterFilter" name="SemesterFilter" class="form-control" onchange="this.form.submit()">
+                        <option value="">All Semesters</option>
+                        <option value="Spring2024">Spring2024</option>
+                        <option value="Fall2024">Fall2024</option>
+                        <!-- Thêm các giá trị khác tùy thuộc vào dữ liệu thực tế -->
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="courseCodeFilter">Filter by Course Code:</label>
+                    <select id="courseCodeFilter" name="CourseCodeFilter" class="form-control" onchange="this.form.submit()">
+                        <option value="">All Courses</option>
+                        <option value="MAS111">MAS111</option>
+                        <option value="MLN111">MLN111</option>
+                        <!-- Thêm các giá trị khác tùy thuộc vào dữ liệu thực tế -->
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="statusFilter">Filter by Status:</label>
+                    <select id="statusFilter" name="StatusFilter" class="form-control" onchange="this.form.submit()">
+                        <option value="">All Statuses</option>
+                        <option value="Pass">Pass</option>
+                        <option value="Not Passed">Not Passed</option>
+                        <!-- Thêm các giá trị khác tùy thuộc vào dữ liệu thực tế -->
+                    </select>
+                </div>
+            </div>
+
+          
+
+
+
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>CourseName</th>
+                            <th>CourseCode</th>
+                            <th>Assignment 1</th>
+                            <th>Assignment 2</th>
+                            <th>Assignment 3</th>
+                            <th>Progress Test 1</th>
+                            <th>Progress Test 2</th>
+                            <th>Progress Test 3</th>
+                            <th>Final Exam</th>
+                            <th>Average Score</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var report in Model.StudentReports)
+                        {
+                            <tr>
+                                <td>@report.SemesterCode</td>
+                                <td>@report.CourseName</td>
+                                <td>@report.CourseCode</td>
+                                <td>@report.Assignment1</td>
+                                <td>@report.Assignment2</td>
+                                <td>@report.Assignment3</td>
+                                <td>@report.ProgressTest1</td>
+                                <td>@report.ProgressTest2</td>
+                                <td>@report.ProgressTest3</td>
+                                <td>@report.FinalExam</td>
+                                <td>@string.Format("{0:F2}", report.AverageScore)</td>
+                                <td>@report.Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+<!-- End of Main Content -->
+
+<!-- Bootstrap core JavaScript-->
+<script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+<script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="~/Asset/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="~/Asset/js/demo/datatables-demo.js"></script>
+

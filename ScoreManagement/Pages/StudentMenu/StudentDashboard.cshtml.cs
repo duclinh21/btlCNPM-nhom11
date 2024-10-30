@@ -21,6 +21,17 @@ namespace ScoreManagement.Pages.StudentMenu
         public string? StudentCode { get; set; }
 
 
+        // Các thuộc tính lọc
+        [BindProperty(SupportsGet = true)]
+        public string? SemesterFilter { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? CourseCodeFilter { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string? StatusFilter { get; set; }
+
+
         public void OnGet(int studentId)
         {
             // Lấy thông tin sinh viên
@@ -42,6 +53,7 @@ namespace ScoreManagement.Pages.StudentMenu
                               {
                                   SemesterCode = sem.SemesterCode,
                                   CourseName = c.CourseName,
+                                  CourseCode = c.CourseCode,
                                   Assignment1 = g.Assignment1,
                                   Assignment2 = g.Assignment2,
                                   Assignment3 = g.Assignment3,
@@ -52,6 +64,8 @@ namespace ScoreManagement.Pages.StudentMenu
                                   AverageScore = g.AverageScore,
                                   Status = g.Status
                               }).ToList();
+
+
         }
     }
 }

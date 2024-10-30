@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6aqUuHzqT+o=",
+  "dgSpecHash": "zlS1qLlLnYc=",
   "success": true,
-  "projectFilePath": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+  "projectFilePath": "D:\\chuyennganh_ki7\\PRN221\\ProjectVerHuy\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tram Oanh\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Tram Oanh\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
