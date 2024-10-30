@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ScoreManagement.Models
 {
@@ -13,6 +14,7 @@ namespace ScoreManagement.Models
 
         public int AccountId { get; set; }
         public string Username { get; set; } = null!;
+        [Display(Name = "Password")]
         public string PasswordHash { get; set; } = null!;
         public string Role { get; set; } = null!;
         public string? Avatar { get; set; }

@@ -4,40 +4,102 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Pages/Shared/_Layout.cshtml";
+    Layout = null;
 }
+<head>
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Major[0].MajorCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Major[0].MajorName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Major) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MajorCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MajorName)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.MajorId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.MajorId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.MajorId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+
+</head>
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Major Management</h1>
+    <p class="mb-4">
+        This table shows the list of accounts with options to create, edit, view, or delete each account.
+    </p>
+
+    <!-- Create New Account Button -->
+    <div class="mb-3">
+        <a asp-page="Create" class="btn btn-primary">Create New Major</a>
+    </div>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Major List</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>
+                                MajorCode
+                            </th>
+                            <th>
+                                MajorName
+                            </th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Major)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MajorCode)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MajorName)
+                                </td>
+                                <td>
+                                    <a asp-page="./Edit" asp-route-id="@item.MajorId">Edit</a> |
+                                    <a asp-page="./Details" asp-route-id="@item.MajorId">Details</a> |
+                                    <a asp-page="./Delete" asp-route-id="@item.MajorId">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+<!-- End of Main Content -->
+<!-- Bootstrap core JavaScript-->
+<script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+<script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="~/Asset/js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="~/Asset/js/demo/datatables-demo.js"></script>
