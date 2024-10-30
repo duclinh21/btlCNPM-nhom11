@@ -1,12 +1,109 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\chuyennganh_ki7\\prn221\\project\\scoremanagement\\scoremanagement\\pages\\studentmenu\\studentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\studentmenu\\studentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\chuyennganh_ki7\\prn221\\project\\scoremanagement\\scoremanagement\\pages\\accountlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\chuyennganh_ki7\\prn221\\project\\scoremanagement\\scoremanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\chuyennganh_ki7\\prn221\\project\\scoremanagement\\scoremanagement\\pages\\accountlogin\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\chuyennganh_ki7\\prn221\\project\\scoremanagement\\scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentDashboard.cshtml",
+              "DocumentMoniker": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
+              "ToolTip": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T08:39:36.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIABAAAAAAAAAADwv9IBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T08:37:05.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "ToolTip": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T08:34:44.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "ToolTip": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-30T08:34:43.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "ScoreManagement\\appsettings.json",
+              "ToolTip": "D:\\chuyennganh_ki7\\PRN221\\Project\\ScoreManagement\\ScoreManagement\\appsettings.json",
+              "RelativeToolTip": "ScoreManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-30T08:29:18.699Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

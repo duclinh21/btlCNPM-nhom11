@@ -42,7 +42,7 @@ namespace ScoreManagement.Pages.AccountLogin
                         var student = _context.Students.SingleOrDefault(s => s.AccountId == account.AccountId);
                         if (student != null)
                         {
-                            return RedirectToPage("/Student/StudentDashboard", new { studentId = student.StudentId });
+                            return RedirectToPage("/StudentMenu/StudentDashboard", new { studentId = student.StudentId });
                         }
                     }
                 }
