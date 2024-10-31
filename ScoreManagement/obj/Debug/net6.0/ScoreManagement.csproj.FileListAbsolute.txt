@@ -189,7 +189,6 @@ E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticweb
 E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ScoreManagement.props
 E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ScoreManagement.props
 E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticwebassets.pack.json
-E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\scopedcss\bundle\ScoreManagement.styles.css
 E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\scopedcss\projectbundle\ScoreManagement.bundle.scp.css
 E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreMan.5CC59649.Up2Date
@@ -904,3 +903,4 @@ D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debu
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.pdb
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.genruntimeconfig.cache
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ref\ScoreManagement.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
