@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,7 +10,6 @@ using ScoreManagement.Models;
 
 namespace ScoreManagement.Pages.AdminMenu.AccountManage
 {
-    [Authorize(Roles = "ADMIN")]
     public class EditModel : PageModel
     {
         private readonly ScoreManagement.Models.Project_PRN221Context _context;
@@ -59,9 +57,24 @@ namespace ScoreManagement.Pages.AdminMenu.AccountManage
             {
                 return Page();
             }
+            var confirmPassword = Request.Form["confirmPasswordField"];
 
-            _context.Attach(Account).State = EntityState.Modified;
+            // Kiểm tra nếu mật khẩu và nhập lại mật khẩu không giống nhau
+            if (Account.PasswordHash != confirmPassword)
+            {
+                ViewData["PasswordMismatchError"] = "No password match.";
+                return Page(); // Trả lại trang với thông báo lỗi
+            }
 
+            // Lấy tài khoản từ database
+            var accountToUpdate = await _context.Accounts.FirstOrDefaultAsync(m => m.AccountId == Account.AccountId);
+            if (accountToUpdate == null)
+            {
+                return NotFound();
+            }
+            accountToUpdate.Username = Account.Username;
+            accountToUpdate.PasswordHash = Account.PasswordHash;
+            accountToUpdate.Role = Account.Role;
             try
             {
                 await _context.SaveChangesAsync();
@@ -83,7 +96,7 @@ namespace ScoreManagement.Pages.AdminMenu.AccountManage
 
         private bool AccountExists(int id)
         {
-          return (_context.Accounts?.Any(e => e.AccountId == id)).GetValueOrDefault();
+            return (_context.Accounts?.Any(e => e.AccountId == id)).GetValueOrDefault();
         }
     }
 }

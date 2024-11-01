@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,7 +7,6 @@ using ScoreManagement.Models;
 
 namespace ScoreManagement.Pages.AdminMenu.AccountManage
 {
-    [Authorize(Roles = "ADMIN")]
     public class CreateModel : PageModel
     {
         private readonly ScoreManagement.Models.Project_PRN221Context _context;
@@ -37,6 +35,11 @@ namespace ScoreManagement.Pages.AdminMenu.AccountManage
         {
             if (!ModelState.IsValid)
             {
+                ViewData["RoleOptions"] = new List<SelectListItem>
+        {
+            new SelectListItem { Value = "LECTURER", Text = "Lecturer" },
+            new SelectListItem { Value = "STUDENT", Text = "Student" }
+        };
                 return Page();
             }
 
@@ -46,12 +49,19 @@ namespace ScoreManagement.Pages.AdminMenu.AccountManage
 
             if (existingAccount)
             {
-                // Thêm lỗi vào ModelState nếu Username đã tồn tại
                 ModelState.AddModelError("Account.Username", "Username đã tồn tại. Vui lòng chọn Username khác.");
                 return Page();
             }
 
-            // Nếu không có lỗi, thêm Account mới vào database
+            // Kiểm tra nếu mật khẩu và mật khẩu xác nhận giống nhau
+            var confirmPassword = Request.Form["confirmPasswordField"];
+            if (Account.PasswordHash != confirmPassword)
+            {
+                ModelState.AddModelError(string.Empty, "Mật khẩu và Nhập lại mật khẩu không giống nhau.");
+                return Page();
+            }
+
+            // Thêm Account mới vào database
             _context.Accounts.Add(Account);
             await _context.SaveChangesAsync();
 

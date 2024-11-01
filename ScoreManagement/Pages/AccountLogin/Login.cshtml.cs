@@ -77,6 +77,14 @@ namespace ScoreManagement.Pages.AccountLogin
             return Page();
         }
 
+        public async Task<IActionResult> OnPostLogoutAsync()
+        {
+            Console.WriteLine("Logout function called");
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToPage("/AccountLogin/Login");
+        }
+
+
 
         private bool VerifyPassword(string enteredPassword, string storedPasswordHash)
         {

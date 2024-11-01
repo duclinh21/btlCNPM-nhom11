@@ -69,11 +69,14 @@
                                                 <tr>
                                                     <td>@Html.DisplayFor(modelItem => item.AccountId)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.Username)</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.PasswordHash)</td>
+                                                    <td id="password-@item.AccountId" data-password="@item.PasswordHash">
+                                                        @("*".PadLeft(item.PasswordHash.Length, '*'))
+                                                    </td>
                                                     <td>@Html.DisplayFor(modelItem => item.Role)</td>
                                                     <td>
+                                                        <button class="btn btn-secondary" onclick="togglePassword(@item.AccountId, this)">Display</button> |
                                                         <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@item.AccountId">Edit</a> |
-                                                        <a asp-page="./Details" class="btn btn-success" asp-route-id="@item.AccountId">Details</a> |
+                                                        <a asp-page="./Details" class="btn btn-success" asp-route-id="@item.AccountId">Deltails</a> |
                                                         <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@item.AccountId">Delete</a>
                                                     </td>
                                                 </tr>
@@ -96,7 +99,24 @@
         </div>
     </header>
 
-    <!-- Giữ nguyên các script cũ -->
+    <!--script-->
+    <script>
+        function togglePassword(accountId, button) {
+            const passwordCell = document.getElementById(`password-${accountId}`);
+            const originalPassword = passwordCell.getAttribute('data-password');
+
+            // Kiểm tra trạng thái hiện tại của ô mật khẩu
+            if (passwordCell.textContent.includes("*")) {
+                // Hiển thị mật khẩu
+                passwordCell.textContent = originalPassword;
+                button.textContent = "Hide";
+            } else {
+                // Ẩn mật khẩu
+                passwordCell.textContent = "*".repeat(originalPassword.length);
+                button.textContent = "Display";
+            }
+        }
+    </script>
     <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
     <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
