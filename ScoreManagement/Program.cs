@@ -1,3 +1,4 @@
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using ScoreManagement.Models;
 
@@ -11,8 +12,17 @@ namespace ScoreManagement
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            // Cấu hình DbContext cho kết nối cơ sở dữ liệu
             builder.Services.AddDbContext<Project_PRN221Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("value")));
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/AccountLogin/Login"; // Đường dẫn đến trang đăng nhập
+        options.AccessDeniedPath = "/AccountLogin/PageNotFound404"; // Trang khi truy cập bị từ chối
+    });
 
             var app = builder.Build();
 
@@ -29,9 +39,13 @@ namespace ScoreManagement
 
             app.UseRouting();
 
+            // Thêm xác thực và phân quyền vào pipeline
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapRazorPages();
+
+            // Định tuyến trang chính đến trang đăng nhập
             app.MapGet("/", context =>
             {
                 context.Response.Redirect("/AccountLogin/Login");

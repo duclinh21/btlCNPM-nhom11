@@ -1,4 +1,6 @@
-﻿namespace ScoreManagement.ViewModels
+﻿using ScoreManagement.Models;
+
+namespace ScoreManagement.ViewModels
 {
     public class StudentReportViewModel
     {
@@ -15,5 +17,15 @@
         public double? FinalExam { get; set; }
         public double? AverageScore { get; set; }
         public string? Status { get; set; }
+
+        public static List<string> GetSemesters(List<Semester> semesters)
+        {
+            return semesters.Select(s => s.SemesterCode).Distinct().ToList();
+        }
+
+        public static List<string> GetStatuses()
+        {
+            return new List<string> { "Pass", "Not Pass" };
+        }
     }
 }

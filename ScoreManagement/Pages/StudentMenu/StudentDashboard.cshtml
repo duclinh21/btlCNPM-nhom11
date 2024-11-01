@@ -39,43 +39,29 @@
     </p>
 
     <!-- Grade Report Table Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Student Grade Report</h6>
+    <div class="row mb-2">
+        <div class="col-md-2">
+            <label for="semesterFilter">Filter by Semester:</label>
+            <select class="form-control" id="semesterFilter" onchange="filterReports()">
+                <option value="">All Semesters</option>
+                @foreach (var semester in Model.Semesters)
+                {
+                    <option value="@semester">@semester</option>
+                }
+            </select>
         </div>
-        <div class="card-body">
 
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <label for="semesterFilter">Filter by Semester:</label>
-                    <select id="semesterFilter" name="SemesterFilter" class="form-control" onchange="this.form.submit()">
-                        <option value="">All Semesters</option>
-                        <option value="Spring2024">Spring2024</option>
-                        <option value="Fall2024">Fall2024</option>
-                        <!-- Thêm các giá trị khác tùy thuộc vào dữ liệu thực tế -->
-                    </select>
-                </div>
-
-                <div class="col-md-4">
-                    <label for="courseCodeFilter">Filter by Course Code:</label>
-                    <select id="courseCodeFilter" name="CourseCodeFilter" class="form-control" onchange="this.form.submit()">
-                        <option value="">All Courses</option>
-                        <option value="MAS111">MAS111</option>
-                        <option value="MLN111">MLN111</option>
-                        <!-- Thêm các giá trị khác tùy thuộc vào dữ liệu thực tế -->
-                    </select>
-                </div>
-
-                <div class="col-md-4">
-                    <label for="statusFilter">Filter by Status:</label>
-                    <select id="statusFilter" name="StatusFilter" class="form-control" onchange="this.form.submit()">
-                        <option value="">All Statuses</option>
-                        <option value="Pass">Pass</option>
-                        <option value="Not Passed">Not Passed</option>
-                        <!-- Thêm các giá trị khác tùy thuộc vào dữ liệu thực tế -->
-                    </select>
-                </div>
-            </div>
+        <div class="col-md-2">
+            <label for="statusFilter">Filter by Status:</label>
+            <select class="form-control" id="statusFilter" onchange="filterReports()">
+                <option value="">All Statuses</option>
+                @foreach (var status in Model.Statuses)
+                {
+                    <option value="@status">@status</option>
+                }
+            </select>
+        </div>
+    </div>
 
           
 
@@ -99,25 +85,25 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @foreach (var report in Model.StudentReports)
-                        {
-                            <tr>
-                                <td>@report.SemesterCode</td>
-                                <td>@report.CourseName</td>
-                                <td>@report.CourseCode</td>
-                                <td>@report.Assignment1</td>
-                                <td>@report.Assignment2</td>
-                                <td>@report.Assignment3</td>
-                                <td>@report.ProgressTest1</td>
-                                <td>@report.ProgressTest2</td>
-                                <td>@report.ProgressTest3</td>
-                                <td>@report.FinalExam</td>
-                                <td>@string.Format("{0:F2}", report.AverageScore)</td>
-                                <td>@report.Status</td>
-                            </tr>
-                        }
-                    </tbody>
+            <tbody id="reportTableBody">
+                @foreach (var report in Model.StudentReports)
+                {
+                    <tr>
+                        <td>@report.SemesterCode</td>
+                        <td>@report.CourseName</td>
+                        <td>@report.CourseCode</td>
+                        <td>@report.Assignment1</td>
+                        <td>@report.Assignment2</td>
+                        <td>@report.Assignment3</td>
+                        <td>@report.ProgressTest1</td>
+                        <td>@report.ProgressTest2</td>
+                        <td>@report.ProgressTest3</td>
+                        <td>@report.FinalExam</td>
+                        <td>@string.Format("{0:F2}", report.AverageScore)</td>
+                        <td>@report.Status</td>
+                    </tr>
+                }
+            </tbody>
                 </table>
             </div>
         </div>
@@ -143,4 +129,27 @@
 
 <!-- Page level custom scripts -->
 <script src="~/Asset/js/demo/datatables-demo.js"></script>
+
+
+<script>
+    function filterReports() {
+        var semesterFilter = document.getElementById("semesterFilter").value;
+        var statusFilter = document.getElementById("statusFilter").value;
+        var rows = document.querySelectorAll("#reportTableBody tr");
+
+        rows.forEach(function (row) {
+            var semester = row.cells[0].textContent;
+            var status = row.cells[11].textContent;
+
+            var semesterMatch = semesterFilter === "" || semester === semesterFilter;
+            var statusMatch = statusFilter === "" || status === statusFilter;
+
+            if (semesterMatch && statusMatch) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+</script>
 

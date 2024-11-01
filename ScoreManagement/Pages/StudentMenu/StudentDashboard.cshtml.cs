@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using ScoreManagement.Models;
 using System.Linq;
 using ScoreManagement.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ScoreManagement.Pages.StudentMenu
 {
+    [Authorize(Roles = "STUDENT")]
     public class StudentDashboardModel : PageModel
     {
         private readonly Project_PRN221Context _context;
@@ -20,16 +22,9 @@ namespace ScoreManagement.Pages.StudentMenu
         public string? FullName { get; set; }
         public string? StudentCode { get; set; }
 
+        public List<string> Semesters { get; set; }
+        public List<string> Statuses { get; set; }
 
-        // Các thuộc tính lọc
-        [BindProperty(SupportsGet = true)]
-        public string? SemesterFilter { get; set; }
-
-        [BindProperty(SupportsGet = true)]
-        public string? CourseCodeFilter { get; set; }
-
-        [BindProperty(SupportsGet = true)]
-        public string? StatusFilter { get; set; }
 
 
         public void OnGet(int studentId)
@@ -41,6 +36,10 @@ namespace ScoreManagement.Pages.StudentMenu
                 FullName = student.FullName;
                 StudentCode = student.StudentCode;
             }
+
+            // Lấy danh sách học kỳ và trạng thái
+            Semesters = _context.Semesters.Select(s => s.SemesterCode).Distinct().ToList();
+            Statuses = new List<string> { "Pass", "Not Pass" };
 
             // Lấy thông tin về các khóa học và điểm cho sinh viên cụ thể
             StudentReports = (from sc in _context.StudentsCourses
