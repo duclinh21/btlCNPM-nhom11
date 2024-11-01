@@ -21,6 +21,7 @@ namespace ScoreManagement
     .AddCookie(options =>
     {
         options.LoginPath = "/AccountLogin/Login"; // Đường dẫn đến trang đăng nhập
+        options.LogoutPath = "/AccountLogin/Logout";
         options.AccessDeniedPath = "/AccountLogin/PageNotFound404"; // Trang khi truy cập bị từ chối
     });
 

@@ -1,15 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using ScoreManagement.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using ScoreManagement.Models;
 using System.Security.Claims;
+using System.Linq;
 
 namespace ScoreManagement.Pages.AccountLogin
 {
     public class LoginModel : PageModel
     {
         private readonly Project_PRN221Context _context;
+
         public LoginModel(Project_PRN221Context context)
         {
             _context = context;
@@ -23,7 +25,7 @@ namespace ScoreManagement.Pages.AccountLogin
             public string Username { get; set; }
             public string Password { get; set; }
 
-            public bool RememberMe { get; set; } // Thêm thuộc tính RememberMe
+            public bool RememberMe { get; set; }
         }
 
         public IActionResult OnPost()
@@ -33,27 +35,29 @@ namespace ScoreManagement.Pages.AccountLogin
                 var account = _context.Accounts.SingleOrDefault(a => a.Username == Input.Username);
                 if (account != null && VerifyPassword(Input.Password, account.PasswordHash))
                 {
-                    // Tạo các claim dựa trên vai trò của người dùng
                     var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, Input.Username),
-                new Claim(ClaimTypes.Role, account.Role) // Thêm vai trò
+                new Claim(ClaimTypes.Role, account.Role)
             };
 
-                    // Tạo đối tượng ClaimsIdentity với claims
-                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    if (account.Role == "LECTURER")
+                    {
+                        var lecturer = _context.Lecturers.SingleOrDefault(s => s.AccountId == account.AccountId);
+                        if (lecturer != null)
+                        {
+                            // Add LecturerId claim only if lecturer is found
+                            claims.Add(new Claim("LecturerId", lecturer.LecturerId.ToString()));
+                        }
+                    }
 
-                    // Đăng nhập người dùng với cookie
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                    // Điều hướng dựa trên vai trò
-                    if (account.Role == "ADMIN")
+                    // Redirect based on role
+                    if (account.Role == "LECTURER")
                     {
-                        return RedirectToPage("/AdminMenu/AdminDashboard");
-                    }
-                    else if (account.Role == "LECTURER")
-                    {
-                        return RedirectToPage("/LecturerDashboard");
+                        return RedirectToPage("/LectureMenu/LecturerDashboard");
                     }
                     else if (account.Role == "STUDENT")
                     {
@@ -63,15 +67,22 @@ namespace ScoreManagement.Pages.AccountLogin
                             return RedirectToPage("/StudentMenu/StudentDashboard", new { studentId = student.StudentId });
                         }
                     }
+                    else if (account.Role == "ADMIN")
+                    {
+                        return RedirectToPage("/AdminMenu/AdminDashboard");
+                    }
                 }
                 ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             }
             return Page();
         }
 
+
         private bool VerifyPassword(string enteredPassword, string storedPasswordHash)
         {
             return enteredPassword == storedPasswordHash;
         }
+
+        
     }
 }

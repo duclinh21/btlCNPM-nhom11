@@ -1,0 +1,67 @@
+﻿@page "{ClassId:int?}"
+@model ScoreManagement.Pages.LectureMenu.LecturerDashboardModel
+
+@{
+    ViewData["Title"] = "Lecturer Dashboard";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/LecturerDashboard.css" asp-append-version="true" />
+<link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+<div id="wrapper">
+
+    @await Html.PartialAsync("_SidebarLecturer")
+
+    <!-- Content Area -->
+    <div class="content">
+        @await Html.PartialAsync("_Topbar")
+        @if (Model.TeachingClasses != null && Model.TeachingClasses.Count > 0)
+        {
+            <h1>Danh Sách Các Lớp Đang Dạy</h1>
+            <div class="class-list">
+                @foreach (var classItem in Model.TeachingClasses)
+                {
+                    <div class="class-item">
+                        <a asp-page="/LectureMenu/LecturerDashboard" asp-route-ClassId="@classItem.ClassId">
+                            <h3>@classItem.ClassCode - @classItem.CourseCode</h3>
+                        </a>
+                        <p>Môn Học: @classItem.CourseName</p>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <h1>Không có lớp nào được dạy.</h1>
+        }
+  
+        @if (Model.SelectedClass != null)
+        {
+            <p>Mã Lớp: @Model.SelectedClass.ClassCode - Môn: @Model.SelectedCourse?.CourseCode</p>
+            <h2>Danh Sách Học Sinh</h2>
+            <ul>
+                @if (Model.Students != null && Model.Students.Count > 0)
+                {
+                    foreach (var student in Model.Students)
+                    {
+                        <li>@student.StudentName - Mã Sinh Viên: @student.StudentCode</li>
+                    }
+                }
+                else
+                {
+                    <li>Không có sinh viên nào trong lớp.</li>
+                }
+            </ul>
+        }
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+</div>
