@@ -1,0 +1,79 @@
+﻿@page "{StudentId:int?}"
+@model ScoreManagement.Pages.LectureMenu.StudentGradesModel
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/StudentGrades.css" asp-append-version="true" />
+<link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+<link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+<div id="wrapper">
+
+    @await Html.PartialAsync("_SidebarLecturer")
+    <div class="content p-10">     
+        @await Html.PartialAsync("_Topbar")
+        <h2 class="text-center my-4">Điểm của Sinh Viên - @Model.StudentName</h2>
+        @if (Model.StudentGrade != null)
+        {
+            <form method="post" class="bg-light p-4 rounded shadow">
+                <h4 class="mb-3">Cập Nhật Điểm</h4>
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Loại Điểm</th>
+                            <th>Điểm</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in new[]
+                       {
+                    new { Name = "Assignment 1", Value = Model.StudentGrade.Assignment1 },
+                    new { Name = "Assignment 2", Value = Model.StudentGrade.Assignment2 },
+                    new { Name = "Assignment 3", Value = Model.StudentGrade.Assignment3 },
+                    new { Name = "Progress Test 1", Value = Model.StudentGrade.ProgressTest1 },
+                    new { Name = "Progress Test 2", Value = Model.StudentGrade.ProgressTest2 },
+                    new { Name = "Progress Test 3", Value = Model.StudentGrade.ProgressTest3 },
+                    new { Name = "Final Exam", Value = Model.StudentGrade.FinalExam },
+                    })
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>
+                                    <input type="number" asp-for="@item.Value" class="form-control" min="0" />
+                                </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td><strong>Average Score</strong></td>
+                            <td><strong>@Model.StudentGrade.GetFormattedAverageScore()</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Status</strong></td>
+                            <td><strong>@Model.StudentGrade.Status</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-group">
+                    <button type="submit" asp-page-handler="Update" class="btn btn-success">Cập Nhật</button>
+                    <button type="submit" asp-page-handler="Delete" class="btn btn-danger">Xóa</button>
+                </div>
+            </form>
+        }
+        else
+        {
+            <div class="alert alert-warning" role="alert">
+                Không có điểm cho sinh viên này.
+                <a href="@Url.Page("/LectureMenu/CreateGrade", new { StudentId = Model.StudentId })" class="btn btn-primary ml-3">Tạo điểm</a>
+            </div>
+        }
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+</div>
