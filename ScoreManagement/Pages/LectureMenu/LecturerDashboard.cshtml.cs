@@ -85,6 +85,7 @@ namespace ScoreManagement.Pages.LectureMenu
                         s => s.StudentId,
                         (sc, s) => new StudentInfo
                         {
+                            StudentId = s.StudentId,
                             StudentName = s.FullName,
                             StudentCode = s.StudentCode
                         }
@@ -111,6 +112,7 @@ namespace ScoreManagement.Pages.LectureMenu
     // New class to represent student information
     public class StudentInfo
     {
+        public int StudentId { get; set; }
         public string? StudentName { get; set; }
         public string? StudentCode { get; set; }
     }
