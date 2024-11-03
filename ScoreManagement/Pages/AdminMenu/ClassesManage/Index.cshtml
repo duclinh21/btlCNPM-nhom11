@@ -58,6 +58,9 @@
                                         <thead>
                                             <tr>
                                                 <th>
+                                                    ClassId
+                                                </th>
+                                                <th>
                                                     ClassCode
                                                 </th>
                                                 <th>
@@ -70,6 +73,9 @@
                                             @foreach (var item in Model.Class)
                                             {
                                                 <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.ClassId)
+                                                    </td>
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.ClassCode)
                                                     </td>

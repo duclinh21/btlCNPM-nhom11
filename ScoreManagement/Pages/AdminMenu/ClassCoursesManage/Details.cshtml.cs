@@ -29,7 +29,11 @@ namespace ScoreManagement.Pages.AdminMenu.ClassCoursesManage
                 return NotFound();
             }
 
-            var classcourse = await _context.ClassCourses.FirstOrDefaultAsync(m => m.ClassCourseId == id);
+            var classcourse = await _context.ClassCourses
+                .Include(x => x.Course)
+                .Include(x => x.Class)
+                .Include(x => x.Lecturer)
+                .FirstOrDefaultAsync(m => m.ClassCourseId == id);
             if (classcourse == null)
             {
                 return NotFound();

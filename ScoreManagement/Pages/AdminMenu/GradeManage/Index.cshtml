@@ -57,10 +57,14 @@
                                         <thead>
                                             <tr>
                                                 <th>
+                                                    StudentCode
+                                                </th>
+                                                <th>
                                                     FullName
                                                 </th>
                                                 <th>CourseCode</th>
                                                 <th>SemesterCode</th>
+                                                <th>ClassCode</th>
                                                 <th>
                                                     Assignment1
                                                 </th>
@@ -95,9 +99,11 @@
                                             @foreach (var item in Model.Grade)
                                             {
                                                 <tr>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Student.StudentCode)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.StudentCourse.Student.FullName)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.StudentCourse.Course.CourseCode)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.StudentCourse.Semester.SemesterCode)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Class.ClassCode)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.Assignment1)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.Assignment2)</td>
                                                     <td>@Html.DisplayFor(modelItem => item.Assignment3)</td>

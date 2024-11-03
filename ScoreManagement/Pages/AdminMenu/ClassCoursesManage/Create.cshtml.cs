@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using ScoreManagement.Models;
 
 namespace ScoreManagement.Pages.AdminMenu.ClassCoursesManage
@@ -22,9 +23,9 @@ namespace ScoreManagement.Pages.AdminMenu.ClassCoursesManage
 
         public IActionResult OnGet()
         {
-        ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassCode");
-        ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName");
-        ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerName");
+            ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassId");
+            ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName");
+            ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerId");
             return Page();
         }
 
@@ -44,6 +45,24 @@ namespace ScoreManagement.Pages.AdminMenu.ClassCoursesManage
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+        public async Task<JsonResult> OnGetClassCode(int classId)
+        {
+            var classCode = await _context.Classes
+                .Where(c => c.ClassId == classId)
+                .Select(c => c.ClassCode)
+                .FirstOrDefaultAsync();
+
+            return new JsonResult(classCode);
+        }
+        public async Task<JsonResult> OnGetLecturerName(int lecturerId)
+        {
+            var classCode = await _context.Lecturers
+                .Where(c => c.LecturerId == lecturerId)
+                .Select(c => c.LecturerName)
+                .FirstOrDefaultAsync();
+
+            return new JsonResult(classCode);
         }
     }
 }

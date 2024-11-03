@@ -3,52 +3,32 @@
   "WorkspaceRootPath": "E:\\Prn221\\Project\\git\\ScoreManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\accountlogin\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\accountlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\lecturemenu\\lecturerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\lecturemenu\\lecturerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\shared\\_topbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\shared\\_topbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\accountmanage\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\accountmanage\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\grademanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\adminmenu\\grademanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\grademanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\grademanage\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\grademanage\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\grademanage\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\grademanage\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\accountmanage\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\accountmanage\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\classcoursesmanage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\classcoursesmanage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\classcoursesmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\classcoursesmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\classcoursesmanage\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\classcoursesmanage\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\classcoursesmanage\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\classcoursesmanage\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|E:\\Prn221\\Project\\git\\ScoreManagement\\scoremanagement\\pages\\adminmenu\\classcoursesmanage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\classcoursesmanage\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 172,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -118,116 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Program.cs",
-              "RelativeDocumentMoniker": "ScoreManagement\\Program.cs",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Program.cs",
-              "RelativeToolTip": "ScoreManagement\\Program.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwDkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T17:45:42.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Topbar.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Topbar.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\Shared\\_Topbar.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Topbar.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\Shared\\_Topbar.cshtml",
-              "ViewState": "AQIAADsAAAAAAAAAAAAmwF4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:39:51.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LecturerDashboard.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:39:29.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:39:19.473Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAuwFUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T17:35:37.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Delete.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Delete.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Delete.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Delete.cshtml",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwEEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:33:50.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Index.cshtml",
               "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Index.cshtml",
               "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Index.cshtml",
               "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Index.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:33:43.439Z"
+              "WhenOpened": "2024-11-03T08:30:13.388Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Create.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Create.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Create.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Create.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:33:31.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Delete.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Delete.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Delete.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\GradeManage\\Delete.cshtml",
-              "ViewState": "AQIAACsAAAAAAAAAAAAgwEYAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:33:28.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\appsettings.json",
               "RelativeDocumentMoniker": "ScoreManagement\\appsettings.json",
@@ -235,31 +119,68 @@
               "RelativeToolTip": "ScoreManagement\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-01T17:32:18.277Z"
+              "WhenOpened": "2024-11-03T08:25:55.624Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:31:57.287Z"
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml.cs",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml.cs",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T08:22:46.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Create.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Create.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Create.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABXAAAA",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Index.cshtml",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAmwIQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T17:31:25.895Z"
+              "WhenOpened": "2024-11-03T08:22:42.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Edit.cshtml",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Edit.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-03T08:22:23.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml.cs",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml.cs",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAmwB8AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T08:22:17.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\ClassCoursesManage\\Details.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAmwDgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-03T08:22:09.495Z"
             }
           ]
         }

@@ -13,22 +13,40 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ClassCourse.Class)
+            Class Id
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ClassCourse.Class.ClassId)
-        </dd>
+        </dd>       
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ClassCourse.Course)
+            ClassCode
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ClassCourse.Course.CourseId)
+            @Html.DisplayFor(model => model.ClassCourse.Class.ClassCode)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ClassCourse.Lecturer)
+            CourseCode
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassCourse.Course.CourseCode)
+        </dd>       
+        <dt class="col-sm-2">
+            Course Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassCourse.Course.CourseName)
+        </dd>
+        <dt class="col-sm-2">
+            Lecturer
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ClassCourse.Lecturer.LecturerId)
+        </dd>       
+        <dt class="col-sm-2">
+            Lecturer Name
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClassCourse.Lecturer.LecturerName)
         </dd>
     </dl>
 </div>

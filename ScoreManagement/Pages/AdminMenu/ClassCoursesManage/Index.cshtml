@@ -57,10 +57,16 @@
                                         <thead>
                                             <tr>
                                                 <th>
+                                                    ClassId
+                                                </th>
+                                                <th>
                                                     ClassCode
                                                 </th>
                                                 <th>
                                                     CourseName
+                                                </th>
+                                                <th>
+                                                    LecturerId
                                                 </th>
                                                 <th>
                                                     LecturerName
@@ -73,11 +79,17 @@
                                             {
                                                 <tr>
                                                     <td>
+                                                        @Html.DisplayFor(modelItem => item.Class.ClassId)
+                                                    </td>
+                                                    <td>
                                                         @Html.DisplayFor(modelItem => item.Class.ClassCode)
                                                     </td>
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.Course.CourseName)
                                                     </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Lecturer.LecturerId)
+                                                    </td>                                                    
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.Lecturer.LecturerName)
                                                     </td>

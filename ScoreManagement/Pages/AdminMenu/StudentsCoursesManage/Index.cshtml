@@ -59,10 +59,19 @@
                                                     StudentCourseId
                                                 </th>
                                                 <th>
-                                                    Class
+                                                    ClassId
                                                 </th>
                                                 <th>
-                                                    Student
+                                                    ClassCode
+                                                </th>
+                                                <th>
+                                                    StudentId
+                                                </th>
+                                                <th>
+                                                    StudentCode
+                                                </th>
+                                                <th>
+                                                    StudentName
                                                 </th>
                                                 <th>
                                                     Course
@@ -84,10 +93,19 @@
                                                         @Html.DisplayFor(modelItem => item.StudentCourseId)
                                                     </td>
                                                     <td>
+                                                        @Html.DisplayFor(modelItem => item.Class.ClassId)
+                                                    </td>
+                                                    <td>
                                                         @Html.DisplayFor(modelItem => item.Class.ClassCode)
                                                     </td>
                                                     <td>
+                                                        @Html.DisplayFor(modelItem => item.Student.StudentId)
+                                                    </td>
+                                                    <td>
                                                         @Html.DisplayFor(modelItem => item.Student.StudentCode)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Student.FullName)
                                                     </td>
                                                     <td>
                                                         @Html.DisplayFor(modelItem => item.Course.CourseName)

@@ -31,6 +31,7 @@ namespace ScoreManagement.Pages.AdminMenu.GradeManage
                     .ThenInclude(sc => sc.Course) // Liên kết với Course qua StudentCourse
                     .Include(g => g.StudentCourse.Semester) // Liên kết với Semester qua StudentCourse
                     .Include(g => g.StudentCourse.Student) // Include thêm bảng Students thông qua StudentCourse
+                    .Include(g => g.StudentCourse.Class) // Include thêm bảng Students thông qua StudentCourse
                     .ToListAsync();
             }
         }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using ScoreManagement.Models;
 
 namespace ScoreManagement.Pages.AdminMenu.StudentsCoursesManage
@@ -22,11 +23,11 @@ namespace ScoreManagement.Pages.AdminMenu.StudentsCoursesManage
 
         public IActionResult OnGet()
         {
-        ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassCode");
+        ViewData["ClassId"] = new SelectList(_context.Classes, "ClassId", "ClassId");
         ViewData["CourseId"] = new SelectList(_context.Courses, "CourseId", "CourseName");
         ViewData["LecturerId"] = new SelectList(_context.Lecturers, "LecturerId", "LecturerName");
         ViewData["SemesterId"] = new SelectList(_context.Semesters, "SemesterId", "SemesterCode");
-        ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentCode");
+        ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId");
             return Page();
         }
 
@@ -46,6 +47,24 @@ namespace ScoreManagement.Pages.AdminMenu.StudentsCoursesManage
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+        public async Task<JsonResult> OnGetStudentInfo(int studentId)
+        {
+            var student = await _context.Students
+                .Where(s => s.StudentId == studentId)
+                .Select(s => new { s.StudentCode, s.FullName })
+                .FirstOrDefaultAsync();
+
+            return new JsonResult(student);
+        }
+        public async Task<JsonResult> OnGetClassCode(int classId)
+        {
+            var classCode = await _context.Classes
+                .Where(c => c.ClassId == classId)
+                .Select(c => c.ClassCode)
+                .FirstOrDefaultAsync();
+
+            return new JsonResult(classCode);
         }
     }
 }
