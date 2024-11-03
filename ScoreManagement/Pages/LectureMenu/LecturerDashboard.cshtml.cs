@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using ScoreManagement.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 
 namespace ScoreManagement.Pages.LectureMenu
@@ -31,13 +32,9 @@ namespace ScoreManagement.Pages.LectureMenu
             return RedirectToPage("/AccountLogin/Login");
         }
 
-        public IActionResult OnGet(int? ClassId)
+        public IActionResult OnGet(int? CourseId)
         {
             // Retrieve LecturerId from claims
-            foreach (var claim in User.Claims)
-            {
-                System.Diagnostics.Debug.WriteLine($"Claim Type: {claim.Type}, Claim Value: {claim.Value}");
-            }
             var lecturerIdClaim = User.Claims.FirstOrDefault(c => c.Type == "LecturerId");
             if (lecturerIdClaim != null)
             {
@@ -45,13 +42,10 @@ namespace ScoreManagement.Pages.LectureMenu
             }
             else
             {
-                // Redirect to login if LecturerId is not available in claims
                 return RedirectToPage("/AccountLogin/Login");
             }
 
-
-
-            // Get the list of teaching classes
+            // Lấy danh sách các lớp mà giảng viên đang dạy
             TeachingClasses = _context.ClassCourses
                 .Where(cc => cc.LecturerId == LecturerId)
                 .Select(cc => new ClassInfo
@@ -59,46 +53,41 @@ namespace ScoreManagement.Pages.LectureMenu
                     ClassCode = cc.Class.ClassCode,
                     CourseName = cc.Course.CourseName ?? "Unknown Course",
                     CourseCode = cc.Course.CourseCode,
-                    ClassId = cc.Class.ClassId
+                    ClassId = cc.Class.ClassId,
+                    CourseId = cc.CourseId
                 })
                 .ToList();
-            if (TeachingClasses == null)
-            {
-                TeachingClasses = new List<ClassInfo>();
-            }
 
-            // If ClassId is provided, load class details, courses, and students
-            if (ClassId.HasValue)
+            if (CourseId.HasValue)
             {
-                SelectedClass = _context.Classes.FirstOrDefault(c => c.ClassId == ClassId.Value);
-                SelectedCourse = _context.ClassCourses
-                    .Where(cc => cc.ClassId == ClassId.Value)
-                    .Select(cc => cc.Course)
-                    .FirstOrDefault();
-
-                // Fetch student names and codes
-                Students = _context.StudentClasses
-                    .Where(sc => sc.ClassId == ClassId.Value)
-                    .Join(
-                        _context.Students,
-                        sc => sc.StudentId,
-                        s => s.StudentId,
-                        (sc, s) => new StudentInfo
-                        {
-                            StudentId = s.StudentId,
-                            StudentName = s.FullName,
-                            StudentCode = s.StudentCode
-                        }
-                    )
-                    .ToList();
-                if (Students == null)
+                // Tìm ClassId dựa trên CourseId
+                var classCourse = _context.ClassCourses.FirstOrDefault(cc => cc.CourseId == CourseId.Value);
+                if (classCourse != null)
                 {
-                    Students = new List<StudentInfo>();
+                    SelectedClass = _context.Classes.FirstOrDefault(c => c.ClassId == classCourse.ClassId);
+                    SelectedCourse = _context.Courses.FirstOrDefault(c => c.CourseId == CourseId.Value);
+
+                    // Lấy danh sách sinh viên dựa trên ClassId
+                    Students = _context.StudentClasses
+                        .Where(sc => sc.ClassId == classCourse.ClassId)
+                        .Join(
+                            _context.Students,
+                            sc => sc.StudentId,
+                            s => s.StudentId,
+                            (sc, s) => new StudentInfo
+                            {
+                                StudentId = s.StudentId,
+                                StudentName = s.FullName,
+                                StudentCode = s.StudentCode
+                            }
+                        )
+                        .ToList();
                 }
             }
 
             return Page();
         }
+
     }
 
     public class ClassInfo
@@ -107,6 +96,7 @@ namespace ScoreManagement.Pages.LectureMenu
         public string? ClassCode { get; set; }
         public string? CourseName { get; set; }
         public string? CourseCode { get; set; }
+        public int? CourseId { get; set; }
     }
 
     // New class to represent student information
@@ -116,6 +106,4 @@ namespace ScoreManagement.Pages.LectureMenu
         public string? StudentName { get; set; }
         public string? StudentCode { get; set; }
     }
-
-   
 }

@@ -38,7 +38,8 @@ namespace ScoreManagement.Pages.AccountLogin
                     var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, Input.Username),
-                new Claim(ClaimTypes.Role, account.Role)
+                new Claim(ClaimTypes.Role, account.Role),
+                new Claim("AccountId", account.AccountId.ToString())
             };
 
                     if (account.Role == "LECTURER")

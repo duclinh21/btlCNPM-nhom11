@@ -11329,19 +11329,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ryo\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\Desktop\\PRN221_V2.2\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
       "projectName": "ScoreManagement",
-      "projectPath": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
-      "packagesPath": "C:\\Users\\Ryo\\.nuget\\packages\\",
-      "outputPath": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\obj\\",
+      "projectPath": "C:\\Users\\ACER\\Desktop\\PRN221_V2.2\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ACER\\Desktop\\PRN221_V2.2\\ScoreManagement\\ScoreManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ryo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11361,11 +11361,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11424,7 +11419,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

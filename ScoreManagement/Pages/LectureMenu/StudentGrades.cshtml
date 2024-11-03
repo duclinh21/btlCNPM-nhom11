@@ -1,9 +1,7 @@
 ﻿@page "{StudentId:int?}"
 @model ScoreManagement.Pages.LectureMenu.StudentGradesModel
 
-
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="~/css/StudentGrades.css" asp-append-version="true" />
 <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
 <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
@@ -14,11 +12,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account Management</title>
-
-    <!-- Các link CSS cần thiết -->
-    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -37,6 +30,21 @@
                     @await Html.PartialAsync("_Topbar")
 
                     <h2 class="text-center my-4">Điểm của Sinh Viên - @Model.StudentName</h2>
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["ErrorMessage"]
+                        </div>
+                    }
+
                     @if (Model.StudentGrade != null)
                     {
                         <form method="post" class="bg-light p-4 rounded shadow" style="width: 100%;">
@@ -49,24 +57,52 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var item in new[]
-                                   {
-                                new { Name = "Assignment 1", Value = Model.StudentGrade.Assignment1 },
-                                new { Name = "Assignment 2", Value = Model.StudentGrade.Assignment2 },
-                                new { Name = "Assignment 3", Value = Model.StudentGrade.Assignment3 },
-                                new { Name = "Progress Test 1", Value = Model.StudentGrade.ProgressTest1 },
-                                new { Name = "Progress Test 2", Value = Model.StudentGrade.ProgressTest2 },
-                                new { Name = "Progress Test 3", Value = Model.StudentGrade.ProgressTest3 },
-                                new { Name = "Final Exam", Value = Model.StudentGrade.FinalExam },
-                                })
-                                    {
-                                        <tr>
-                                            <td>@item.Name</td>
-                                            <td>
-                                                <input type="number" asp-for="@item.Value" class="form-control" min="0" style="width: 100%;" />
-                                            </td>
-                                        </tr>
-                                    }
+                                    <input type="hidden" asp-for="StudentId" value="@Model.StudentId" />
+                                    <input type="hidden" asp-for="CourseId" value="@Model.CourseId" />
+                                    <input type="hidden" asp-for="StudentGrade.StudentCourseId" value="@Model.StudentGrade.StudentCourseId" />
+
+                                    <tr>
+                                        <td>Assignment 1</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.Assignment1" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assignment 2</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.Assignment2" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assignment 3</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.Assignment3" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Progress Test 1</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.ProgressTest1" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Progress Test 2</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.ProgressTest2" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Progress Test 3</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.ProgressTest3" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Final Exam</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.FinalExam" class="form-control" min="0" style="width: 100%;" />
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td><strong>Average Score</strong></td>
                                         <td><strong>@Model.StudentGrade.GetFormattedAverageScore()</strong></td>
@@ -87,9 +123,14 @@
                     {
                         <div class="alert alert-warning" role="alert">
                             Không có điểm cho sinh viên này.
-                            <a href="@Url.Page("/LectureMenu/CreateGrade", new { StudentId = Model.StudentId })" class="btn btn-primary ml-3">Tạo điểm</a>
+                            <a href="@Url.Page("/LectureMenu/CreateGrade", new { StudentId = Model.StudentId, CourseId = Model.CourseId })" class="btn btn-primary ml-3">Tạo điểm</a>
                         </div>
                     }
+
+                    <!-- Back Button -->
+                    <div class="form-group mt-4">
+                        <a href="@Url.Page("/LectureMenu/LecturerDashboard", new { CourseId = Model.CourseId })" class="btn btn-secondary">Quay lại</a>
+                    </div>
 
                 </div>
                 <!-- End of Main Content -->
@@ -109,4 +150,3 @@
     <script src="~/Asset/js/demo/datatables-demo.js"></script>
 </body>
 </html>
-

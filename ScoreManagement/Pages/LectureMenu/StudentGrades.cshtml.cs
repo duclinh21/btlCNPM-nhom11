@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ScoreManagement.Models;
-using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Logging;
 
 namespace ScoreManagement.Pages.LectureMenu
 {
@@ -11,84 +11,141 @@ namespace ScoreManagement.Pages.LectureMenu
     public class StudentGradesModel : PageModel
     {
         private readonly Project_PRN221Context _context;
+        private readonly ILogger<StudentGradesModel> _logger;
 
-        public StudentGradesModel(Project_PRN221Context context)
+        public StudentGradesModel(Project_PRN221Context context, ILogger<StudentGradesModel> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [BindProperty(SupportsGet = true)]
+        public int CourseId { get; set; }
+
+        [BindProperty(SupportsGet = true)]
         public Grade? StudentGrade { get; set; }
-        public string? StudentName { get; set; }
+        public string? StudentName { get; private set; }
 
         [BindProperty(SupportsGet = true)]
         public int StudentId { get; set; }
 
-        public void OnGet()
+        public void OnGet(int? studentId, int? courseId)
         {
-            // Lấy thông tin điểm của sinh viên dựa trên StudentId
-            StudentGrade = _context.Grades
-                .Where(g => g.StudentCourse.Student.StudentId == StudentId)
-                .Select(g => new Grade
-                {
-                    Assignment1 = g.Assignment1,
-                    Assignment2 = g.Assignment2,
-                    Assignment3 = g.Assignment3,
-                    ProgressTest1 = g.ProgressTest1,
-                    ProgressTest2 = g.ProgressTest2,
-                    ProgressTest3 = g.ProgressTest3,
-                    FinalExam = g.FinalExam,
-                    AverageScore = g.AverageScore,
-                    Status = g.Status,
-                    StudentCourse = g.StudentCourse // Ensure you also select StudentCourse to access Student
-                })
-                .FirstOrDefault();
-
-            // Check for nulls before accessing FullName
-            if (StudentGrade != null && StudentGrade.StudentCourse != null && StudentGrade.StudentCourse.Student != null)
+            if (studentId.HasValue && courseId.HasValue)
             {
-                StudentName = StudentGrade.StudentCourse.Student.FullName; // Lấy tên sinh viên
+                var studentCourse = _context.StudentsCourses
+                    .FirstOrDefault(sc => sc.StudentId == studentId && sc.CourseId == courseId);
+
+                
+
+                if (studentCourse != null)
+                {
+                    StudentGrade = _context.Grades
+                        .FirstOrDefault(g => g.StudentCourseId == studentCourse.StudentCourseId);
+
+                    // Tính toán AverageScore và Status
+                    StudentGrade?.CalculateAverageAndStatus();
+
+                    var studentName = _context.Students
+    .Where(s => s.StudentId == studentId) // Thay đổi điều kiện dựa trên cách bạn lưu trữ sinh viên
+    .Select(s => s.FullName) // Giả sử FullName là thuộc tính tên sinh viên
+    .FirstOrDefault();
+                    StudentName = studentName;
+
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "studentCourse không có dữ liệu.";
+                }
             }
             else
             {
-                StudentName = "Unknown Student"; // Or handle accordingly
+                TempData["ErrorMessage"] = "StudentId hoặc courseId không có dữ liệu.";
             }
         }
-
 
         public IActionResult OnPostUpdate()
         {
-            // Cập nhật thông tin điểm
-            var gradeToUpdate = _context.Grades.Find(StudentGrade?.GradeId);
-            if (gradeToUpdate != null)
-            {
-                gradeToUpdate.Assignment1 = StudentGrade.Assignment1;
-                gradeToUpdate.Assignment2 = StudentGrade.Assignment2;
-                gradeToUpdate.Assignment3 = StudentGrade.Assignment3;
-                gradeToUpdate.ProgressTest1 = StudentGrade.ProgressTest1;
-                gradeToUpdate.ProgressTest2 = StudentGrade.ProgressTest2;
-                gradeToUpdate.ProgressTest3 = StudentGrade.ProgressTest3;
-                gradeToUpdate.FinalExam = StudentGrade.FinalExam;
-                gradeToUpdate.AverageScore = StudentGrade.AverageScore;
-                gradeToUpdate.Status = StudentGrade.Status;
 
-                _context.SaveChanges();
+            if (StudentGrade == null)
+            {
+                TempData["ErrorMessage"] = "Cập nhật không thành công. Vui lòng kiểm tra dữ liệu StudentGrade.";
+                return RedirectToPage(new { StudentId, CourseId });
             }
 
-            return RedirectToPage(new { StudentId });
+            // Kiểm tra xem StudentCourseId có giá trị không
+            if (StudentGrade.StudentCourseId == null)
+            {
+                TempData["ErrorMessage"] = "Cập nhật không thành công. Vui lòng kiểm tra dữ liệu StudentCourseId.";
+                return RedirectToPage(new { StudentId, CourseId });
+            }
+
+            // Tìm StudentCourse dựa trên StudentId và CourseId
+            var studentCourse = _context.StudentsCourses
+                .FirstOrDefault(sc => sc.StudentId == StudentId && sc.CourseId == CourseId);
+
+            if (studentCourse != null)
+            {
+                // Tìm Grade dựa trên StudentCourseId
+                var gradeToUpdate = _context.Grades
+                    .FirstOrDefault(g => g.StudentCourseId == studentCourse.StudentCourseId);
+
+                if (gradeToUpdate != null)
+                {
+                    // Cập nhật điểm
+                    gradeToUpdate.Assignment1 = StudentGrade.Assignment1;
+                    gradeToUpdate.Assignment2 = StudentGrade.Assignment2;
+                    gradeToUpdate.Assignment3 = StudentGrade.Assignment3;
+                    gradeToUpdate.ProgressTest1 = StudentGrade.ProgressTest1;
+                    gradeToUpdate.ProgressTest2 = StudentGrade.ProgressTest2;
+                    gradeToUpdate.ProgressTest3 = StudentGrade.ProgressTest3;
+                    gradeToUpdate.FinalExam = StudentGrade.FinalExam;
+
+                    try
+                    {
+                        _context.SaveChanges();
+                        _logger.LogInformation("Grade updated successfully for StudentId: {StudentId}", StudentId);
+                        TempData["SuccessMessage"] = "Cập nhật điểm thành công!";
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Error updating grade for StudentId: {StudentId}", StudentId);
+                        TempData["ErrorMessage"] = "Cập nhật không thành công. Vui lòng thử lại.";
+                    }
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Không tìm thấy điểm để cập nhật.";
+                }
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Không tìm thấy thông tin khóa học cho sinh viên.";
+            }
+
+            return RedirectToPage(new { StudentId, CourseId });
         }
+
 
         public IActionResult OnPostDelete()
         {
-            // Xóa điểm
-            var gradeToDelete = _context.Grades.Find(StudentId);
-            if (gradeToDelete != null)
+            var studentCourse = _context.StudentsCourses
+                .FirstOrDefault(sc => sc.StudentId == StudentId && sc.CourseId == CourseId);
+
+            if (studentCourse != null)
             {
-                _context.Grades.Remove(gradeToDelete);
-                _context.SaveChanges();
+                var gradeToDelete = _context.Grades
+                    .FirstOrDefault(g => g.StudentCourseId == studentCourse.StudentCourseId);
+
+                if (gradeToDelete != null)
+                {
+                    _context.Grades.Remove(gradeToDelete);
+                    _context.SaveChanges();
+                    _logger.LogInformation("Grade deleted successfully for StudentId: {StudentId} in CourseId: {CourseId}", StudentId, CourseId);
+                }
             }
 
-            return RedirectToPage("/LectureMenu/LecturerDashboard"); // Điều hướng về trang danh sách lớp
+            return RedirectToPage(new { StudentId, CourseId });
         }
     }
 }

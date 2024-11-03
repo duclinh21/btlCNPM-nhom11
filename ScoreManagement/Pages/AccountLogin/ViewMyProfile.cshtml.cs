@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using ScoreManagement.Models;
-using System.Linq;
+using System.Threading.Tasks;
 
 namespace ScoreManagement.Pages.AccountLogin
 {
@@ -17,19 +18,37 @@ namespace ScoreManagement.Pages.AccountLogin
         }
 
         public Account AccountInfo { get; set; }
+        public Lecturer LecturerInfo { get; set; } // Thông tin giảng viên
+        public Student StudentInfo { get; set; } // Thông tin sinh viên
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
-            var username = User.Identity.Name;
+            var accountIdClaim = User.Claims.FirstOrDefault(c => c.Type == "AccountId")?.Value;
 
-            AccountInfo = _context.Accounts.SingleOrDefault(a => a.Username == username);
+            if (accountIdClaim == null || !int.TryParse(accountIdClaim, out int accountId))
+            {
+                return NotFound(); // Hoặc xử lý lỗi khác nếu không tìm thấy AccountId
+            }
+
+            AccountInfo = await _context.Accounts.FindAsync(accountId);
 
             if (AccountInfo == null)
             {
-                return RedirectToPage("/AccountLogin/Login");
+                return NotFound(); // Nếu không tìm thấy tài khoản
+            }
+
+            if (AccountInfo.Role == "LECTURER")
+            {
+                LecturerInfo = await _context.Lecturers.FirstOrDefaultAsync(l => l.AccountId == AccountInfo.AccountId);
+            }
+            else if (AccountInfo.Role == "STUDENT")
+            {
+                StudentInfo = await _context.Students.FirstOrDefaultAsync(s => s.AccountId == AccountInfo.AccountId);
             }
 
             return Page();
         }
+
+
     }
 }
