@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "E:\\Prn221\\Project\\git\\ScoreManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\lecturemenu\\studentgrades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\lecturemenu\\studentgrades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\adminmenu\\lecturersmanage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\lecturersmanage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\lecturemenu\\lecturerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\lecturemenu\\lecturerdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\adminmenu\\accountmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\accountmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|e:\\prn221\\project\\git\\scoremanagement\\scoremanagement\\pages\\adminmenu\\lecturersmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\lecturersmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,60 +78,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LecturerDashboard.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\LectureMenu\\LecturerDashboard.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T13:42:19.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGIAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T13:41:19.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T13:39:11.643Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 209,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "StudentGrades.cshtml",
-              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\LectureMenu\\StudentGrades.cshtml",
-              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\LectureMenu\\StudentGrades.cshtml",
-              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\LectureMenu\\StudentGrades.cshtml",
-              "RelativeToolTip": "ScoreManagement\\Pages\\LectureMenu\\StudentGrades.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAmwCQAAAA1AAAA",
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml.cs",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml.cs",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAIwDUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T14:44:24.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml",
+              "ToolTip": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\LecturersManage\\Index.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADEAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-03T13:36:05.795Z",
+              "WhenOpened": "2024-11-03T14:43:48.458Z",
               "EditorCaption": ""
             }
           ]

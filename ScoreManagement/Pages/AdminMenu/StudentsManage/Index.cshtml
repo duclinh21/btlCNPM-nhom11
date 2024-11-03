@@ -41,12 +41,15 @@
                         <!-- Page Heading -->
                         <h1 class="h3 mb-2 text-gray-800">Student Management</h1>
                       
-
+                        <div class="d-flex">
                         <!-- Create New Account Button -->
                         <div class="mb-3">
                             <a asp-page="Create" class="btn btn-primary">Create New Student</a>
                         </div>
-
+                            <div class="mb-3" style="margin-left: 10px">
+                                <a asp-page-handler="ExportToExcel" class="btn btn-success">Xuất Excel</a>
+                            </div>
+						</div>
                         <!-- DataTable Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
