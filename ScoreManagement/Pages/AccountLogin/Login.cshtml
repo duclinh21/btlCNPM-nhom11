@@ -41,11 +41,15 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <div class="image-container">
+                                    <img src="~/asset/img/quanlydiemlogin.png" class="centered-image" height="300" />
+                                </div>
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Xin chào!</h1>
                                     </div>
                                     <form method="post" class="login-form">
                                         <div asp-validation-summary="All" class="text-danger"></div>
@@ -62,14 +66,7 @@
                                             <span asp-validation-for="Input.Password" class="text-danger"></span>
                                         </div>
 
-                                        <div class="form-group">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input asp-for="Input.RememberMe" type="checkbox"  />
-                                                    Ghi nhớ đăng nhập
-                                                </label>
-                                            </div>
-                                        </div>
+                                        
 
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">Đăng nhập</button>
@@ -106,6 +103,30 @@
         <p style="color:red">Invalid login attempt.</p>
     }
 </body>
+
+<style>
+    .bg-login-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Đảm bảo cột chiếm toàn bộ chiều cao của thẻ cha */
+        padding: 20px; /* Thêm khoảng cách để ảnh không sát lề */
+    }
+
+    .centered-image {
+        max-width: 100%; /* Đảm bảo ảnh tự động thu nhỏ theo chiều ngang */
+        max-height: 100%; /* Đảm bảo ảnh tự động thu nhỏ theo chiều dọc */
+        object-fit: contain; /* Giữ tỷ lệ ảnh */
+    }
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
 </html>
 

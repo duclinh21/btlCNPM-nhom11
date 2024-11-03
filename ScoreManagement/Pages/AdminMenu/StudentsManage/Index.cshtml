@@ -41,12 +41,15 @@
                         <!-- Page Heading -->
                         <h1 class="h3 mb-2 text-gray-800">Student Management</h1>
                       
-
+                        <div class="d-flex">
                         <!-- Create New Account Button -->
                         <div class="mb-3">
                             <a asp-page="Create" class="btn btn-primary">Create New Student</a>
                         </div>
-
+                            <div class="mb-3" style="margin-left: 10px">
+                                <a asp-page-handler="ExportToExcel" class="btn btn-success">Xuất Excel</a>
+                            </div>
+						</div>
                         <!-- DataTable Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
@@ -101,9 +104,9 @@
                                                         @Html.DisplayFor(modelItem => item.Major.MajorName)
                                                     </td>
                                                     <td>
-                                                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@item.AccountId">Edit</a> |
-                                                        <a asp-page="./Details" class="btn btn-success" asp-route-id="@item.AccountId">Details</a> |
-                                                        <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@item.AccountId">Delete</a>
+                                                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@item.StudentId">Edit</a> |
+                                                        <a asp-page="./Details" class="btn btn-success" asp-route-id="@item.StudentId">Details</a> |
+                                                        <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@item.StudentId">Delete</a>
                                                     </td>
                                                 </tr>
                                             }
