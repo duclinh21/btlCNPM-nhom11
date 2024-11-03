@@ -22,6 +22,10 @@ namespace ScoreManagement.Pages.AdminMenu
         public int TotalLecturers { get; set; }
         public int TotalCourses { get; set; }
 
+        public int TotalClasses { get; set; }   
+        public int TotalAccounts { get; set; }  
+        public int TotalMajors { get; set; }
+
         // Properties for storing statistics
         public int PassedCount { get; set; }
         public int FailedCount { get; set; }
@@ -33,6 +37,10 @@ namespace ScoreManagement.Pages.AdminMenu
             TotalStudents = await _context.Students.CountAsync();
             TotalLecturers = await _context.Lecturers.CountAsync();
             TotalCourses = await _context.Courses.CountAsync();
+
+            TotalClasses = await _context.Classes.CountAsync();    
+            TotalAccounts = await _context.Accounts.CountAsync();  
+            TotalMajors = await _context.Majors.CountAsync();
 
             // Query the database to get the count of passed and failed students
             PassedCount = await _context.Grades.CountAsync(g => g.Status == "Pass");
