@@ -6,6 +6,8 @@
     ViewData["Title"] = "Student Dashboard";
     Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
 <head>
     
 
@@ -28,128 +30,113 @@
 
 </head>
 
-<!-- Begin Page Content -->
-<div class="container-fluid">
 
-    <!-- Page Heading -->
-    <br />
-    <h1 class="h3 mb-2 text-gray-800">Grade Report for @Model.FullName (@Model.StudentCode)</h1>
-    <p class="mb-4">
-        Below is the detailed grade report for each course and assessment component for the selected student.
-    </p>
+<body>
+    <header>
+        <div id="wrapper">
+            
 
-    <!-- Grade Report Table Example -->
-    <div class="row mb-2">
-        <div class="col-md-2">
-            <label for="semesterFilter">Filter by Semester:</label>
-            <select class="form-control" id="semesterFilter" onchange="filterReports()">
-                <option value="">All Semesters</option>
-                @foreach (var semester in Model.Semesters)
-                {
-                    <option value="@semester">@semester</option>
-                }
-            </select>
-        </div>
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
 
-        <div class="col-md-2">
-            <label for="statusFilter">Filter by Status:</label>
-            <select class="form-control" id="statusFilter" onchange="filterReports()">
-                <option value="">All Statuses</option>
-                @foreach (var status in Model.Statuses)
-                {
-                    <option value="@status">@status</option>
-                }
-            </select>
-        </div>
-    </div>
+                <!-- Main Content -->
+                <div id="content">
 
-          
+                    <!-- Gọi Topbar từ Partial View -->
+                    @await Html.PartialAsync("_Topbar")
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <br />
+                        <h1 class="h3 mb-2 text-gray-800">Grade Report for @Model.FullName (@Model.StudentCode)</h1>
+                        <p class="mb-4">
+                            Below is the detailed grade report for each course and assessment component for the selected student.
+                        </p>
 
 
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Semester</th>
+                                        <th>CourseName</th>
+                                        <th>CourseCode</th>
+                                        <th>Assignment 1</th>
+                                        <th>Assignment 2</th>
+                                        <th>Assignment 3</th>
+                                        <th>Progress Test 1</th>
+                                        <th>Progress Test 2</th>
+                                        <th>Progress Test 3</th>
+                                        <th>Final Exam</th>
+                                        <th>Average Score</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportTableBody">
+                                    @foreach (var report in Model.StudentReports)
 
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Semester</th>
-                            <th>CourseName</th>
-                            <th>CourseCode</th>
-                            <th>Assignment 1</th>
-                            <th>Assignment 2</th>
-                            <th>Assignment 3</th>
-                            <th>Progress Test 1</th>
-                            <th>Progress Test 2</th>
-                            <th>Progress Test 3</th>
-                            <th>Final Exam</th>
-                            <th>Average Score</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-            <tbody id="reportTableBody">
-                @foreach (var report in Model.StudentReports)
-                {
-                    <tr>
-                        <td>@report.SemesterCode</td>
-                        <td>@report.CourseName</td>
-                        <td>@report.CourseCode</td>
-                        <td>@report.Assignment1</td>
-                        <td>@report.Assignment2</td>
-                        <td>@report.Assignment3</td>
-                        <td>@report.ProgressTest1</td>
-                        <td>@report.ProgressTest2</td>
-                        <td>@report.ProgressTest3</td>
-                        <td>@report.FinalExam</td>
-                        <td>@string.Format("{0:F2}", report.AverageScore)</td>
-                        <td>@report.Status</td>
-                    </tr>
-                }
-            </tbody>
-                </table>
+                                    {
+                                        <tr>
+                                            <td>@report.SemesterCode</td>
+                                            <td>@report.CourseName</td>
+                                            <td>@report.CourseCode</td>
+                                            <td>@report.Assignment1</td>
+                                            <td>@report.Assignment2</td>
+                                            <td>@report.Assignment3</td>
+                                            <td>@report.ProgressTest1</td>
+                                            <td>@report.ProgressTest2</td>
+                                            <td>@report.ProgressTest3</td>
+                                            <td>@report.FinalExam</td>
+                                            <td>@string.Format("{0:F2}", report.AverageScore)</td>
+                                            <td>@report.Status</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
+
+                </div>
+                <!-- End of Main Content -->
+            </div>
+            <!-- End of Content Wrapper -->
+
         </div>
-    </div>
+    </header>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</div>
-<!-- /.container-fluid -->
-<!-- End of Main Content -->
+    <!-- Core plugin JavaScript-->
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js">    </script>
 
-<!-- Bootstrap core JavaScript-->
-<script src="~/Asset/vendor/jquery/jquery.min.js"></script>
-<script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="~/Asset/js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins -->
-<script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="~/Asset/js/demo/datatables-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="~/Asset/js/demo/datatables-demo.js"></script>
 
 
-<script>
-    function filterReports() {
-        var semesterFilter = document.getElementById("semesterFilter").value;
-        var statusFilter = document.getElementById("statusFilter").value;
-        var rows = document.querySelectorAll("#reportTableBody tr");
+   
 
-        rows.forEach(function (row) {
-            var semester = row.cells[0].textContent;
-            var status = row.cells[11].textContent;
 
-            var semesterMatch = semesterFilter === "" || semester === semesterFilter;
-            var statusMatch = statusFilter === "" || status === statusFilter;
+</body>
+</html>
 
-            if (semesterMatch && statusMatch) {
-                row.style.display = "";
-            } else {
-                row.style.display = "none";
-            }
-        });
-    }
-</script>
+
+
+
+
+
 

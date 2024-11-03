@@ -37,9 +37,7 @@ namespace ScoreManagement.Pages.StudentMenu
                 StudentCode = student.StudentCode;
             }
 
-            // Lấy danh sách học kỳ và trạng thái
-            Semesters = _context.Semesters.Select(s => s.SemesterCode).Distinct().ToList();
-            Statuses = new List<string> { "Pass", "Not Pass" };
+           
 
             // Lấy thông tin về các khóa học và điểm cho sinh viên cụ thể
             StudentReports = (from sc in _context.StudentsCourses

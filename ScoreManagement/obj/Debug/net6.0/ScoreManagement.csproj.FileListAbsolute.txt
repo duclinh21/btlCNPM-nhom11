@@ -886,7 +886,6 @@ D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debu
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.MvcApplicationPartsAssemblyInfo.cache
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.RazorAssemblyInfo.cache
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.RazorAssemblyInfo.cs
-D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.sourcelink.json
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticwebassets.build.json
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticwebassets.development.json
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\staticwebassets\msbuild.ScoreManagement.Microsoft.AspNetCore.StaticWebAssets.props

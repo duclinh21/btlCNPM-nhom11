@@ -100,11 +100,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="~/Asset/js/sb-admin-2.min.js"></script>
+    @if (!ModelState.IsValid)
 
+    {
+        <p style="color:red">Invalid login attempt.</p>
+    }
 </body>
 
 </html>
-@if (!ModelState.IsValid)
-{
-    <p style="color:red">Invalid login attempt.</p>
-}
+
