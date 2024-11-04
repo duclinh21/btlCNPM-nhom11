@@ -16,18 +16,23 @@ namespace ScoreManagement.Models
 		public double? FinalExam { get; set; }
 		public double? AverageScore { get; set; }
 		public string? Status { get; set; }
-		public void CalculateAverageAndStatus()
-		{
-			// Tính toán AverageScore và làm tròn 2 chữ số sau dấu phẩy
-			this.AverageScore = Math.Round(((((Assignment1 ?? 0 * 0.1) + (Assignment2 ?? 0 * 0.1) + (Assignment3 ?? 0 * 0.1))
-										   + (ProgressTest1 ?? 0 * 0.1) + (ProgressTest2 ?? 0 * 0.1) + (ProgressTest3 ?? 0 * 0.1))
-										   + (FinalExam ?? 0 * 0.4)), 2);
+        public void CalculateAverageAndStatus()
+        {
+            // Tính toán AverageScore và làm tròn 2 chữ số sau dấu phẩy
+            this.AverageScore = Math.Round(
+                ((Assignment1 ?? 0) * 0.1) +
+                ((Assignment2 ?? 0) * 0.1) +
+                ((Assignment3 ?? 0) * 0.1) +
+                ((ProgressTest1 ?? 0) * 0.1) +
+                ((ProgressTest2 ?? 0) * 0.1) +
+                ((ProgressTest3 ?? 0) * 0.1) +
+                ((FinalExam ?? 0) * 0.4), 2);
 
-			// Tính toán Status dựa trên AverageScore
-			this.Status = this.AverageScore > 5 ? "Pass" : "Not Pass";
-		}
+            // Tính toán Status dựa trên AverageScore
+            this.Status = this.AverageScore > 5 ? "Pass" : "Not Pass";
+        }
 
-		public string GetFormattedAverageScore()
+        public string GetFormattedAverageScore()
 		{
 			return this.AverageScore.HasValue ? this.AverageScore.Value.ToString("0.00") : "N/A";
 		}
