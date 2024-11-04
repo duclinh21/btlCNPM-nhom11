@@ -57,8 +57,18 @@ namespace ScoreManagement.Pages.StudentsManage
             if (student != null)
             {
                 Student = student;
-                _context.Students.Remove(Student);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.Students.Remove(Student);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa sinh viên này do có dữ liệu liên quan trong bảng khác.");
+                    return Page();
+                }
+                
             }
 
             return RedirectToPage("./Index");

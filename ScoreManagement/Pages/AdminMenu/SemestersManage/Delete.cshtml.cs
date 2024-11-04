@@ -54,8 +54,18 @@ namespace ScoreManagement.Pages.AdminMenu.SemestersManage
             if (semester != null)
             {
                 Semester = semester;
-                _context.Semesters.Remove(Semester);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.Semesters.Remove(Semester);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa học kỳ này do có dữ liệu liên quan đến bảng lớp học.");
+                    return Page();
+                }
+                
             }
 
             return RedirectToPage("./Index");

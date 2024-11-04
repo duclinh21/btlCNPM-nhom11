@@ -54,8 +54,18 @@ namespace ScoreManagement.Pages.AdminMenu.CoursesManage
             if (course != null)
             {
                 Course = course;
-                _context.Courses.Remove(Course);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.Courses.Remove(Course);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa môn học này do có dữ liệu liên quan trong bảng khác.");
+                    return Page();
+                }
+                
             }
 
             return RedirectToPage("./Index");

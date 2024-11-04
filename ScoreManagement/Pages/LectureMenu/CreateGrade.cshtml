@@ -64,31 +64,31 @@
             <form method="post">
                 <div class="form-group">
                     <label asp-for="StudentGrade.Assignment1">Assignment 1</label>
-                    <input type="number" asp-for="StudentGrade.Assignment1" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.Assignment1" class="form-control" min="0" max="10" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="StudentGrade.Assignment2">Assignment 2</label>
-                    <input type="number" asp-for="StudentGrade.Assignment2" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.Assignment2" class="form-control" min="0" max="10" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="StudentGrade.Assignment3">Assignment 3</label>
-                    <input type="number" asp-for="StudentGrade.Assignment3" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.Assignment3" class="form-control" min="0" max="10" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="StudentGrade.ProgressTest1">Progress Test 1</label>
-                    <input type="number" asp-for="StudentGrade.ProgressTest1" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.ProgressTest1" class="form-control" min="0" max="10" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="StudentGrade.ProgressTest2">Progress Test 2</label>
-                    <input type="number" asp-for="StudentGrade.ProgressTest2" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.ProgressTest2" class="form-control" min="0" max="10" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="StudentGrade.ProgressTest3">Progress Test 3</label>
-                    <input type="number" asp-for="StudentGrade.ProgressTest3" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.ProgressTest3" class="form-control" min="0" max="10" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="StudentGrade.FinalExam">Final Exam</label>
-                    <input type="number" asp-for="StudentGrade.FinalExam" class="form-control" required />
+                    <input type="number" asp-for="StudentGrade.FinalExam" class="form-control" min="0" max="10" required />
                 </div>
                 <button type="submit" class="btn btn-primary">Lưu Điểm</button>
             </form>

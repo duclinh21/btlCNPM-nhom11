@@ -54,8 +54,18 @@ namespace ScoreManagement.Pages.AdminMenu.MajorManage
             if (major != null)
             {
                 Major = major;
-                _context.Majors.Remove(Major);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.Majors.Remove(Major);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa ngành học này do có dữ liệu liên quan trong bảng sinh viên.");
+                    return Page();
+                }
+                
             }
 
             return RedirectToPage("./Index");

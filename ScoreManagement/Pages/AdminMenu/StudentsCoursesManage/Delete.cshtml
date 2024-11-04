@@ -44,6 +44,13 @@
             @Html.DisplayFor(model => model.StudentsCourse.Lecturer.LecturerName)
         </dd>
     </dl>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
     
     <form method="post">
         <input type="hidden" asp-for="StudentsCourse.StudentCourseId" />

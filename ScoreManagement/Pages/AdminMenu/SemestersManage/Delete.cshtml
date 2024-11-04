@@ -32,6 +32,13 @@
             @Model.Semester.EndDate?.ToString("dd/MM/yyyy")
         </dd>
     </dl>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
     
     <form method="post">
         <input type="hidden" asp-for="Semester.SemesterId" />

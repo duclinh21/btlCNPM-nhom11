@@ -60,28 +60,23 @@ namespace ScoreManagement.Pages.LectureMenu
 
             if (CourseId.HasValue)
             {
-                // Tìm ClassId dựa trên CourseId
-                var classCourse = _context.ClassCourses.FirstOrDefault(cc => cc.CourseId == CourseId.Value);
+                // Tìm ClassId dựa trên CourseId  và LecturerId
+                var classCourse = _context.ClassCourses
+             .FirstOrDefault(cc => cc.CourseId == CourseId.Value && cc.LecturerId == LecturerId);
                 if (classCourse != null)
                 {
                     SelectedClass = _context.Classes.FirstOrDefault(c => c.ClassId == classCourse.ClassId);
                     SelectedCourse = _context.Courses.FirstOrDefault(c => c.CourseId == CourseId.Value);
 
                     // Lấy danh sách sinh viên dựa trên ClassId
-                    Students = _context.StudentClasses
-                        .Where(sc => sc.ClassId == classCourse.ClassId)
-                        .Join(
-                            _context.Students,
-                            sc => sc.StudentId,
-                            s => s.StudentId,
-                            (sc, s) => new StudentInfo
-                            {
-                                StudentId = s.StudentId,
-                                StudentName = s.FullName,
-                                StudentCode = s.StudentCode
-                            }
-                        )
-                        .ToList();
+                    Students = _context.StudentsCourses
+                          .Where(sc => sc.LecturerId == LecturerId && sc.CourseId == CourseId && sc.ClassId == classCourse.ClassId).Select(sc => new StudentInfo
+                          {
+                              StudentId = sc.StudentId ?? 0,
+                              StudentName = sc.Student.FullName,
+                              StudentCode = sc.Student.StudentCode
+                          })
+                .ToList();
                 }
             }
 
@@ -107,3 +102,4 @@ namespace ScoreManagement.Pages.LectureMenu
         public string? StudentCode { get; set; }
     }
 }
+

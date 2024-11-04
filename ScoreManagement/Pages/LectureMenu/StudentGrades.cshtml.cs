@@ -100,7 +100,7 @@ namespace ScoreManagement.Pages.LectureMenu
                     gradeToUpdate.ProgressTest2 = StudentGrade.ProgressTest2;
                     gradeToUpdate.ProgressTest3 = StudentGrade.ProgressTest3;
                     gradeToUpdate.FinalExam = StudentGrade.FinalExam;
-
+                    gradeToUpdate.CalculateAverageAndStatus();
                     try
                     {
                         _context.SaveChanges();

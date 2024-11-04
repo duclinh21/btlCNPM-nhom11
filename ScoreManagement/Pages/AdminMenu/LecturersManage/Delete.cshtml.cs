@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 using ScoreManagement.Models;
 
@@ -51,13 +52,23 @@ namespace ScoreManagement.Pages.AdminMenu.LecturersManage
             {
                 return NotFound();
             }
+
             var lecturer = await _context.Lecturers.FindAsync(id);
 
             if (lecturer != null)
             {
                 Lecturer = lecturer;
-                _context.Lecturers.Remove(Lecturer);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.Lecturers.Remove(Lecturer);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa giảng viên này do có dữ liệu liên quan trong bảng khác.");
+                    return Page();
+                }
             }
 
             return RedirectToPage("./Index");

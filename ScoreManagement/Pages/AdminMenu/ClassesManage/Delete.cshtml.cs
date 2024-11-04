@@ -56,8 +56,18 @@ namespace ScoreManagement.Pages.AdminMenu.ClassesManage
             if (selectedClass != null)
             {
                 Class = selectedClass;
-                _context.Classes.Remove(Class);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.Classes.Remove(Class);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa lớp học này do có dữ liệu liên quan trong bảng khác.");
+                    return Page();
+                }
+                
             }
 
             return RedirectToPage("./Index");

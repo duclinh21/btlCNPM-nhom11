@@ -55,13 +55,24 @@ namespace ScoreManagement.Pages.AdminMenu.StudentsCoursesManage
             {
                 return NotFound();
             }
+
             var studentscourse = await _context.StudentsCourses.FindAsync(id);
 
             if (studentscourse != null)
             {
                 StudentsCourse = studentscourse;
-                _context.StudentsCourses.Remove(StudentsCourse);
-                await _context.SaveChangesAsync();
+
+                try
+                {
+                    _context.StudentsCourses.Remove(StudentsCourse);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateException)
+                {
+                    ModelState.AddModelError(string.Empty, "Không thể xóa do có dữ liệu liên quan trong bảng grade.");
+                    return Page();
+                }
+                
             }
 
             return RedirectToPage("./Index");

@@ -11657,19 +11657,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ryo\\.nuget\\packages\\": {}
+    "C:\\Users\\Tram Oanh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+      "projectUniqueName": "D:\\chuyennganh_ki7\\PRN221\\ProjectVerHuy\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
       "projectName": "ScoreManagement",
-      "projectPath": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
-      "packagesPath": "C:\\Users\\Ryo\\.nuget\\packages\\",
-      "outputPath": "E:\\Prn221\\Project\\git\\ScoreManagement\\ScoreManagement\\obj\\",
+      "projectPath": "D:\\chuyennganh_ki7\\PRN221\\ProjectVerHuy\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+      "packagesPath": "C:\\Users\\Tram Oanh\\.nuget\\packages\\",
+      "outputPath": "D:\\chuyennganh_ki7\\PRN221\\ProjectVerHuy\\ScoreManagement\\ScoreManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ryo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tram Oanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11677,6 +11677,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11756,7 +11757,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

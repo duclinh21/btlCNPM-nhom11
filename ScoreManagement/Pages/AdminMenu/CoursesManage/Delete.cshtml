@@ -27,6 +27,13 @@
         </dd>
     </dl>
     
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
+
     <form method="post">
         <input type="hidden" asp-for="Course.CourseId" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
