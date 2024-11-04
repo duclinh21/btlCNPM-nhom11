@@ -1465,3 +1465,10 @@ D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\bin\Debu
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\chuyennganh_ki7\PRN221\ProjectVerHuy\ScoreManagement\ScoreManagement\obj\Debug\net6.0\ScoreManagement.sourcelink.json
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\EPPlus.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\EPPlus.Interfaces.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\Prn221\Project\git\ScoreManagement\ScoreManagement\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll

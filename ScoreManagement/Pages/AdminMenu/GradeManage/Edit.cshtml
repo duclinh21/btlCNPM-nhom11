@@ -17,42 +17,42 @@
             <input type="hidden" asp-for="Grade.GradeId" />
             <div class="form-group">
                 <label asp-for="Grade.StudentCourseId" class="control-label"></label>
-                <select asp-for="Grade.StudentCourseId" class="form-control" asp-items="ViewBag.StudentCourseId"></select>
+                <input asp-for="Grade.StudentCourseId" class="form-control" readonly/>
                 <span asp-validation-for="Grade.StudentCourseId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.Assignment1" class="control-label"></label>
-                <input asp-for="Grade.Assignment1" class="form-control" />
+                <input asp-for="Grade.Assignment1" class="form-control" min="0" max="10"/>
                 <span asp-validation-for="Grade.Assignment1" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.Assignment2" class="control-label"></label>
-                <input asp-for="Grade.Assignment2" class="form-control" />
+                <input asp-for="Grade.Assignment2" class="form-control" min="0" max="10" />
                 <span asp-validation-for="Grade.Assignment2" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.Assignment3" class="control-label"></label>
-                <input asp-for="Grade.Assignment3" class="form-control" />
+                <input asp-for="Grade.Assignment3" class="form-control" min="0" max="10" />
                 <span asp-validation-for="Grade.Assignment3" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.ProgressTest1" class="control-label"></label>
-                <input asp-for="Grade.ProgressTest1" class="form-control" />
+                <input asp-for="Grade.ProgressTest1" class="form-control" min="0" max="10" />
                 <span asp-validation-for="Grade.ProgressTest1" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.ProgressTest2" class="control-label"></label>
-                <input asp-for="Grade.ProgressTest2" class="form-control" />
+                <input asp-for="Grade.ProgressTest2" class="form-control" min="0" max="10" />
                 <span asp-validation-for="Grade.ProgressTest2" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.ProgressTest3" class="control-label"></label>
-                <input asp-for="Grade.ProgressTest3" class="form-control" />
+                <input asp-for="Grade.ProgressTest3" class="form-control" min="0" max="10" />
                 <span asp-validation-for="Grade.ProgressTest3" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Grade.FinalExam" class="control-label"></label>
-                <input asp-for="Grade.FinalExam" class="form-control" />
+                <input asp-for="Grade.FinalExam" class="form-control" min="0" max="10" />
                 <span asp-validation-for="Grade.FinalExam" class="text-danger"></span>
             </div>
             <div class="form-group">
