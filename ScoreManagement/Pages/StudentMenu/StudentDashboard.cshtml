@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,7 @@
 
     <!-- Custom styles for this template-->
     <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -34,7 +34,7 @@
 <body>
     <header>
         <div id="wrapper">
-            
+
 
             <!-- Content Wrapper -->
             <div id="content-wrapper" class="d-flex flex-column">
@@ -104,12 +104,23 @@
             <!-- /.container-fluid -->
             <!-- End of Main Content -->
 
-                </div>
-                <!-- End of Main Content -->
-            </div>
-            <!-- End of Content Wrapper -->
-
         </div>
+        <br />
+
+        <div style="display: flex; justify-content: space-around; align-items: center;">
+            <div>
+                <h2>Average Score per Course</h2>
+                <canvas id="scoreChart"></canvas>
+            </div>
+            <div>
+                <h2>Pass/Not Pass Statistics</h2>
+                <canvas id="passFailChart"></canvas>
+            </div>
+        </div>
+
+
+        <!-- End of Content Wrapper -->
+        
     </header>
     <!-- Bootstrap core JavaScript-->
     <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
@@ -128,8 +139,83 @@
     <!-- Page level custom scripts -->
     <script src="~/Asset/js/demo/datatables-demo.js"></script>
 
+    <script>
+        const averageScores = @Html.Raw(Json.Serialize(Model.AverageScorePerCourse));
+    </script>
 
-   
+    <style>
+        #averageScoreChart {
+            max-width: 800px;
+            max-height: 400px;
+        }
+
+        #passFailChart {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+
+    <canvas id="averageScoreChart"></canvas>
+    <script>
+        const ctx = document.getElementById('averageScoreChart').getContext('2d');
+        const courseNames = Object.keys(averageScores);
+        const averageScoresData = Object.values(averageScores);
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: courseNames,
+                datasets: [{
+                    label: 'Average Score',
+                    data: averageScoresData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        // Lấy dữ liệu Pass và Not Pass từ model
+        const passCount = @Model.PassCount;
+        const notPassCount = @Model.NotPassCount;
+
+        // Tạo biểu đồ tròn
+        const ctxPie = document.getElementById('passFailChart').getContext('2d');
+        const passFailChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Pass', 'Not Pass'],
+                datasets: [{
+                    data: [passCount, notPassCount],
+                    backgroundColor: ['#4CAF50', '#F44336'], // Màu xanh cho Pass và đỏ cho Not Pass
+                    hoverBackgroundColor: ['#66BB6A', '#E57373']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Pass/Not Pass Ratio'
+                    }
+                }
+            }
+        });
+    </script>
+
+
 
 
 </body>

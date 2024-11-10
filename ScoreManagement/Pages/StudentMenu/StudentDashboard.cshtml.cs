@@ -28,7 +28,23 @@ namespace ScoreManagement.Pages.StudentMenu
         public List<string> Semesters { get; set; }
         public List<string> Statuses { get; set; }
 
+        public Dictionary<string, double> AverageScorePerCourse { get; set; }
 
+        public int PassCount { get; set; }
+        public int NotPassCount { get; set; }
+
+        public void CalculateStatistics()
+        {
+            if (StudentReports != null && StudentReports.Any())
+            {
+                AverageScorePerCourse = StudentReports
+                    .GroupBy(report => report.CourseName)
+                    .ToDictionary(
+                        group => group.Key,
+                        group => group.Average(report => report.AverageScore ?? 0)
+                    );
+            }
+        }
 
         public void OnGet(int studentId)
         {
@@ -67,6 +83,12 @@ namespace ScoreManagement.Pages.StudentMenu
                               }).ToList();
 
 
+
+            CalculateStatistics();
+
+            // Tính số lượng môn Pass và Not Pass
+            PassCount = StudentReports.Count(r => r.Status == "Pass");
+            NotPassCount = StudentReports.Count(r => r.Status == "Not Pass");
         }
 
 
