@@ -9,299 +9,301 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ScoreManagement
 build_property.RootNamespace = ScoreManagement
-build_property.ProjectDir = D:\chuyennganh_ki7\PRN221\Project\ScoreManagement\ScoreManagement\
+build_property.ProjectDir = D:\project\ScoreManagement\ScoreManagement\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\chuyennganh_ki7\PRN221\Project\ScoreManagement\ScoreManagement
+build_property.MSBuildProjectDirectory = D:\project\ScoreManagement\ScoreManagement
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 6.0
+build_property.EnableCodeStyleSeverity = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AccountLogin/Login.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AccountLogin/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudExvZ2luXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AccountLogin/PageNotFound404.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AccountLogin/PageNotFound404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudExvZ2luXFBhZ2VOb3RGb3VuZDQwNC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AccountLogin/ViewMyProfile.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AccountLogin/ViewMyProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudExvZ2luXFZpZXdNeVByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFjY291bnRNYW5hZ2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFjY291bnRNYW5hZ2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFjY291bnRNYW5hZ2VcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFjY291bnRNYW5hZ2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AccountManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFjY291bnRNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AdminDashboard.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/AdminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEFkbWluRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzQ291cnNlc01hbmFnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzQ291cnNlc01hbmFnZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzQ291cnNlc01hbmFnZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzQ291cnNlc01hbmFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassCoursesManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzQ291cnNlc01hbmFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzZXNNYW5hZ2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzZXNNYW5hZ2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzZXNNYW5hZ2VcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzZXNNYW5hZ2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/ClassesManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENsYXNzZXNNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENvdXJzZXNNYW5hZ2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENvdXJzZXNNYW5hZ2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENvdXJzZXNNYW5hZ2VcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENvdXJzZXNNYW5hZ2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/CoursesManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XENvdXJzZXNNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEdyYWRlTWFuYWdlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEdyYWRlTWFuYWdlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEdyYWRlTWFuYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEdyYWRlTWFuYWdlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/GradeManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XEdyYWRlTWFuYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XExlY3R1cmVyc01hbmFnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XExlY3R1cmVyc01hbmFnZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XExlY3R1cmVyc01hbmFnZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XExlY3R1cmVyc01hbmFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/LecturersManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XExlY3R1cmVyc01hbmFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XE1ham9yTWFuYWdlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XE1ham9yTWFuYWdlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XE1ham9yTWFuYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XE1ham9yTWFuYWdlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/MajorManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XE1ham9yTWFuYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFNlbWVzdGVyc01hbmFnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFNlbWVzdGVyc01hbmFnZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFNlbWVzdGVyc01hbmFnZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFNlbWVzdGVyc01hbmFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/SemestersManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFNlbWVzdGVyc01hbmFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRDbGFzc2VzTWFuYWdlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRDbGFzc2VzTWFuYWdlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRDbGFzc2VzTWFuYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRDbGFzc2VzTWFuYWdlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentClassesManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRDbGFzc2VzTWFuYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzQ291cnNlc01hbmFnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzQ291cnNlc01hbmFnZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzQ291cnNlc01hbmFnZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzQ291cnNlc01hbmFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsCoursesManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzQ291cnNlc01hbmFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Create.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzTWFuYWdlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Delete.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzTWFuYWdlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Details.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzTWFuYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Edit.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzTWFuYWdlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/AdminMenu/StudentsManage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5NZW51XFN0dWRlbnRzTWFuYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Error.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Index.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/LectureMenu/CreateGrade.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/LectureMenu/CreateGrade.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVjdHVyZU1lbnVcQ3JlYXRlR3JhZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/LectureMenu/LecturerDashboard.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/LectureMenu/LecturerDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVjdHVyZU1lbnVcTGVjdHVyZXJEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/LectureMenu/StudentGrades.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/LectureMenu/StudentGrades.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVjdHVyZU1lbnVcU3R1ZGVudEdyYWRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Privacy.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Shared/_Sidebar.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Shared/_Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Shared/_SidebarLecturer.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Shared/_SidebarLecturer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9TaWRlYmFyTGVjdHVyZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Shared/_Topbar.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Shared/_Topbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Ub3BiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/StudentMenu/StudentDashboard.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/StudentMenu/StudentDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudE1lbnVcU3R1ZGVudERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/_ViewImports.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/chuyennganh_ki7/PRN221/Project/ScoreManagement/ScoreManagement/Pages/Shared/_Layout.cshtml]
+[D:/project/ScoreManagement/ScoreManagement/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-92jjpdvesq
