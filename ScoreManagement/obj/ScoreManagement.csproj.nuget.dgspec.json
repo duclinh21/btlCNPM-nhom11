@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj": {}
+    "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\ScoreManagement.csproj": {}
   },
   "projects": {
-    "D:\\project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj": {
+    "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\ScoreManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
+        "projectUniqueName": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\ScoreManagement.csproj",
         "projectName": "ScoreManagement",
-        "projectPath": "D:\\project\\ScoreManagement\\ScoreManagement\\ScoreManagement.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\ScoreManagement\\ScoreManagement\\obj\\",
+        "projectPath": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\ScoreManagement.csproj",
+        "packagesPath": "C:\\Users\\anhvu\\.nuget\\packages\\",
+        "outputPath": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\anhvu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,13 +40,16 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "EPPlus": {
               "target": "Package",
               "version": "[6.2.19, )"
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
