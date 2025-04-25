@@ -16,6 +16,7 @@ namespace ScoreManagement
             // Cấu hình DbContext cho kết nối cơ sở dữ liệu
             builder.Services.AddDbContext<Project_PRN221Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("value")));
+            builder.Services.AddSession();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -39,6 +40,7 @@ namespace ScoreManagement
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             // Thêm xác thực và phân quyền vào pipeline
             app.UseAuthentication();

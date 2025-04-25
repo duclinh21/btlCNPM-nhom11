@@ -1,22 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\",
+  "WorkspaceRootPath": "D:\\Kiet\\btlCNPM-nhom11\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\01_he176170_he171643_he172294_nguyentruonghuy_dangminhtri_phanvannghia_se1747-net\\scoremanagement\\scoremanagement\\pages\\studentmenu\\studentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\adminmenu\\accountmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\accountmanage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\adminmenu\\accountmanage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\accountmanage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\studentmenu\\studentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\studentmenu\\studentdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\01_he176170_he171643_he172294_nguyentruonghuy_dangminhtri_phanvannghia_se1747-net\\scoremanagement\\scoremanagement\\viewmodels\\admindashboardmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\accountlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\adminmenu\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\adminmenu\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\accountlogin\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\viewmodels\\admindashboardmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\viewmodels\\admindashboardmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\01_he176170_he171643_he172294_nguyentruonghuy_dangminhtri_phanvannghia_se1747-net\\scoremanagement\\scoremanagement\\pages\\accountlogin\\viewmyprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\kiet\\btlcnpm-nhom11\\scoremanagement\\pages\\accountlogin\\viewmyprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\pages\\accountlogin\\viewmyprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|d:\\01_he176170_he171643_he172294_nguyentruonghuy_dangminhtri_phanvannghia_se1747-net\\scoremanagement\\scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{16C38860-5E4D-4588-A550-597FAB09DE50}|ScoreManagement\\ScoreManagement.csproj|solutionrelative:scoremanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,19 +54,386 @@
       "DocumentGroups": [
         {
           "DockedWidth": 135,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 74,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1377497384:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:17:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:10:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:17:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{588470cc-84f8-4a57-9ac4-86bca0625ff4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1928210406:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:350743133:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:27:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:23:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:29:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:19:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:33:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:38:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:40:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:41:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:42:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:43:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:44:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Program.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Program.cs",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Program.cs",
+              "RelativeToolTip": "ScoreManagement\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T16:27:59.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAUwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T16:21:33.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\Login.cshtml",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAowKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T16:21:30.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml.cs",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml.cs*",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml.cs*",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T16:16:30.418Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\AccountManage\\Index.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAowIUAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T15:35:58.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AdminMenu\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AdminMenu\\AdminDashboard.cshtml",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AdminMenu\\AdminDashboard.cshtml",
+              "RelativeToolTip": "ScoreManagement\\Pages\\AdminMenu\\AdminDashboard.cshtml",
+              "ViewState": "AgIAANYAAAAAAAAAAAAqwPcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T16:49:20.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "ScoreManagement\\Models\\Account.cs",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Models\\Account.cs",
+              "RelativeToolTip": "ScoreManagement\\Models\\Account.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T15:35:33.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "StudentDashboard.cshtml",
-              "DocumentMoniker": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
               "RelativeDocumentMoniker": "ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
-              "ToolTip": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
               "RelativeToolTip": "ScoreManagement\\Pages\\StudentMenu\\StudentDashboard.cshtml",
               "ViewState": "AgIAALQAAAAAAAAAAAAAAMYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -47,11 +442,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "ScoreManagement\\appsettings.json",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\appsettings.json",
+              "RelativeToolTip": "ScoreManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T15:30:41.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AdminDashboardModel.cs",
-              "DocumentMoniker": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\ViewModels\\AdminDashboardModel.cs",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\ViewModels\\AdminDashboardModel.cs",
               "RelativeDocumentMoniker": "ScoreManagement\\ViewModels\\AdminDashboardModel.cs",
-              "ToolTip": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\ViewModels\\AdminDashboardModel.cs",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\ViewModels\\AdminDashboardModel.cs",
               "RelativeToolTip": "ScoreManagement\\ViewModels\\AdminDashboardModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,39 +468,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ViewMyProfile.cshtml",
-              "DocumentMoniker": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\ViewMyProfile.cshtml",
+              "DocumentMoniker": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AccountLogin\\ViewMyProfile.cshtml",
               "RelativeDocumentMoniker": "ScoreManagement\\Pages\\AccountLogin\\ViewMyProfile.cshtml",
-              "ToolTip": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\Pages\\AccountLogin\\ViewMyProfile.cshtml",
+              "ToolTip": "D:\\Kiet\\btlCNPM-nhom11\\ScoreManagement\\Pages\\AccountLogin\\ViewMyProfile.cshtml",
               "RelativeToolTip": "ScoreManagement\\Pages\\AccountLogin\\ViewMyProfile.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBZwCMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-24T15:32:53.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\appsettings.json",
-              "RelativeDocumentMoniker": "ScoreManagement\\appsettings.json",
-              "ToolTip": "D:\\01_HE176170_HE171643_HE172294_NguyenTruongHuy_DangMinhTri_PhanVanNghia_SE1747-NET\\ScoreManagement\\ScoreManagement\\appsettings.json",
-              "RelativeToolTip": "ScoreManagement\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T15:30:41.617Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 120,
+          "DockedWidth": 135,
           "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+              "Name": "ST:12:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:26:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:31:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:32:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:35:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:36:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:39:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:24:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:28:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:22:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         }
