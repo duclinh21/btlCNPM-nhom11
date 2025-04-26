@@ -1,0 +1,76 @@
+﻿@page
+@model ScoreManagement.Pages.StudentsManage.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Student.StudentCode" class="control-label"></label>
+                <input asp-for="Student.StudentCode" class="form-control" />
+                <span asp-validation-for="Student.StudentCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.FullName" class="control-label"></label>
+                <input asp-for="Student.FullName" class="form-control" />
+                <span asp-validation-for="Student.FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.MajorId" class="control-label"></label>
+                <select asp-for="Student.MajorId" class ="form-control" asp-items="ViewBag.MajorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Dob" class="control-label"></label>
+                <input asp-for="Student.Dob" class="form-control" type="date" />
+                <span asp-validation-for="Student.Dob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Gender" class="control-label"></label>
+                <div>
+                    <label>
+                        <input type="radio" asp-for="Student.Gender" value="true" /> Nam
+                    </label>
+                    <label>
+                        <input type="radio" asp-for="Student.Gender" value="false" /> Nữ
+                    </label>
+                </div>
+                <span asp-validation-for="Student.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Address" class="control-label"></label>
+                <input asp-for="Student.Address" class="form-control" />
+                <span asp-validation-for="Student.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.PhoneNumber" class="control-label"></label>
+                <input asp-for="Student.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Student.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Account</label>
+                <select asp-for="Student.AccountId" class="form-control" asp-items="@(ViewData["AccountId"] as List<SelectListItem>)"></select>
+                <span asp-validation-for="Student.AccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

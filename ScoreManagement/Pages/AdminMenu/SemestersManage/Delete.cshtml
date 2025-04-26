@@ -1,0 +1,48 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.SemestersManage.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Semester</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.SemesterCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Semester.SemesterCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Semester.StartDate?.ToString("dd/MM/yyyy")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Semester.EndDate?.ToString("dd/MM/yyyy")
+        </dd>
+    </dl>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
+    
+    <form method="post">
+        <input type="hidden" asp-for="Semester.SemesterId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

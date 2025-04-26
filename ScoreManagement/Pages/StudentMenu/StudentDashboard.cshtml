@@ -1,0 +1,229 @@
+﻿@page
+@model ScoreManagement.Pages.StudentMenu.StudentDashboardModel
+@{
+}
+@{
+    ViewData["Title"] = "Student Dashboard";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+    <header>
+        <div id="wrapper">
+
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Gọi Topbar từ Partial View -->
+                    @await Html.PartialAsync("_Topbar")
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <br />
+                        <h1 class="h3 mb-2 text-gray-800">Grade Report for @Model.FullName (@Model.StudentCode)</h1>
+                        <p class="mb-4">
+                            Below is the detailed grade report for each course and assessment component for the selected student.
+                        </p>
+
+
+                        <div class="table-responsive">
+                            <a asp-page-handler="ExportToExcel" asp-route-studentId="@Model.StudentId" class="btn btn-primary">Export to Excel</a>
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Semester</th>
+                                        <th>CourseName</th>
+                                        <th>CourseCode</th>
+                                        <th>Assignment 1</th>
+                                        <th>Assignment 2</th>
+                                        <th>Assignment 3</th>
+                                        <th>Progress Test 1</th>
+                                        <th>Progress Test 2</th>
+                                        <th>Progress Test 3</th>
+                                        <th>Final Exam</th>
+                                        <th>Average Score</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reportTableBody">
+                                    @foreach (var report in Model.StudentReports)
+
+                                    {
+                                        <tr>
+                                            <td>@report.SemesterCode</td>
+                                            <td>@report.CourseName</td>
+                                            <td>@report.CourseCode</td>
+                                            <td>@report.Assignment1</td>
+                                            <td>@report.Assignment2</td>
+                                            <td>@report.Assignment3</td>
+                                            <td>@report.ProgressTest1</td>
+                                            <td>@report.ProgressTest2</td>
+                                            <td>@report.ProgressTest3</td>
+                                            <td>@report.FinalExam</td>
+                                            <td>@string.Format("{0:F2}", report.AverageScore)</td>
+                                            <td>@report.Status</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+            <!-- End of Main Content -->
+
+        </div>
+        <br />
+
+        <div style="display: flex; justify-content: space-around; align-items: center;">
+            <div>
+                <h2>Average Score per Course</h2>
+                <canvas id="scoreChart"></canvas>
+            </div>
+            <div>
+                <h2>Pass/Not Pass Statistics</h2>
+                <canvas id="passFailChart"></canvas>
+            </div>
+        </div>
+
+
+        <!-- End of Content Wrapper -->
+        
+    </header>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js">    </script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/Asset/js/demo/datatables-demo.js"></script>
+
+    <script>
+        const averageScores = @Html.Raw(Json.Serialize(Model.AverageScorePerCourse));
+    </script>
+
+    <style>
+        #averageScoreChart {
+            max-width: 800px;
+            max-height: 400px;
+        }
+
+        #passFailChart {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+
+    <canvas id="averageScoreChart"></canvas>
+    <script>
+        const ctx = document.getElementById('averageScoreChart').getContext('2d');
+        const courseNames = Object.keys(averageScores);
+        const averageScoresData = Object.values(averageScores);
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: courseNames,
+                datasets: [{
+                    label: 'Average Score',
+                    data: averageScoresData,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        // Lấy dữ liệu Pass và Not Pass từ model
+        const passCount = @Model.PassCount;
+        const notPassCount = @Model.NotPassCount;
+
+        // Tạo biểu đồ tròn
+        const ctxPie = document.getElementById('passFailChart').getContext('2d');
+        const passFailChart = new Chart(ctxPie, {
+            type: 'pie',
+            data: {
+                labels: ['Pass', 'Not Pass'],
+                datasets: [{
+                    data: [passCount, notPassCount],
+                    backgroundColor: ['#4CAF50', '#F44336'], // Màu xanh cho Pass và đỏ cho Not Pass
+                    hoverBackgroundColor: ['#66BB6A', '#E57373']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Pass/Not Pass Ratio'
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

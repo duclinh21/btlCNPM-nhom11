@@ -1,0 +1,152 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.GradeManage.IndexModel
+
+@{
+    ViewData["Title"] = "Grade Managenment";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Management</title>
+
+    <!-- Các link CSS cần thiết -->
+    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="wrapper">
+            <!-- Gọi Sidebar từ Partial View -->
+            @await Html.PartialAsync("_Sidebar")
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Gọi Topbar từ Partial View -->
+                    @await Html.PartialAsync("_Topbar")
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <h1 class="h3 mb-2 text-gray-800">Grade Managenment</h1>
+                   
+
+                        <!-- Create New Account Button -->
+                        <div class="mb-3">
+                            <a asp-page-handler="ExportExcel" class="btn btn-success">Xuất Excel</a>
+                        </div>
+                        <!-- DataTable Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">List of student scores</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    StudentCode
+                                                </th>
+                                                <th>
+                                                    FullName
+                                                </th>
+                                                <th>CourseCode</th>
+                                                <th>SemesterCode</th>
+                                                <th>ClassCode</th>
+                                                <th>
+                                                    Assignment1
+                                                </th>
+                                                <th>
+                                                    Assignment2
+                                                </th>
+                                                <th>
+                                                    Assignment3
+                                                </th>
+                                                <th>
+                                                    ProgressTest1
+                                                </th>
+                                                <th>
+                                                    ProgressTest2
+                                                </th>
+                                                <th>
+                                                    ProgressTest3
+                                                </th>
+                                                <th>
+                                                    FinalExam
+                                                </th>
+                                                <th>
+                                                    AverageScore
+                                                </th>
+                                                <th>
+                                                    Status
+                                                </th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.Grade)
+                                            {
+                                                <tr>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Student.StudentCode)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Student.FullName)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Course.CourseCode)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Semester.SemesterCode)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.StudentCourse.Class.ClassCode)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.Assignment1)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.Assignment2)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.Assignment3)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.ProgressTest1)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.ProgressTest2)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.ProgressTest3)</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.FinalExam)</td>
+                                                    <td>@item.GetFormattedAverageScore()</td>
+                                                    <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                                                    <td>
+                                                        <a asp-page="./Edit" class="btn btn-primary" asp-route-id="@item.GradeId">Edit</a> |
+                                                        <a asp-page="./Details" class="btn btn-success" asp-route-id="@item.GradeId">Details</a> |
+                                                        <a asp-page="./Delete" class="btn btn-danger" asp-route-id="@item.GradeId">Delete</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.container-fluid -->
+                    <!-- End of Page Content -->
+
+                </div>
+                <!-- End of Main Content -->
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+    </header>
+
+    <!-- Giữ nguyên các script cũ -->
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+    <script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Asset/js/demo/datatables-demo.js"></script>
+</body>
+</html>
+
+

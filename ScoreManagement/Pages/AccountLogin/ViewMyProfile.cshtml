@@ -1,0 +1,45 @@
+﻿@page
+@model ScoreManagement.Pages.AccountLogin.ViewMyProfileModel
+
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<link rel="stylesheet" href="~/css/profile.css" />
+
+<div class="container">
+    <h2>My Profile</h2>
+
+    <div class="profile-container">
+        <div class="profile-info">
+            <p><strong>Username:</strong> @Model.AccountInfo.Username</p>
+            <p><strong>Role:</strong> @Model.AccountInfo.Role</p>
+
+            @if (Model.AccountInfo.Role == "LECTURER")
+            {
+                <div class="lecturer-info">
+                    <p><strong>Lecturer Name:</strong> @Model.LecturerInfo.LecturerName</p>
+                    <p><strong>Phone Number:</strong> @Model.LecturerInfo.PhoneNumber</p>
+                    <p><strong>Address:</strong> @Model.LecturerInfo.Address</p>
+                </div>
+            }
+            else if (Model.AccountInfo.Role == "STUDENT")
+            {
+                <div class="student-info">
+                    <p><strong>Full Name:</strong> @Model.StudentInfo.FullName</p>
+                    <p><strong>Student Code:</strong> @Model.StudentInfo.StudentCode</p>
+                    <p><strong>Major:</strong> @Model.StudentInfo.MajorId</p> <!-- Cần hiển thị tên Major -->
+                </div>
+            }
+        </div>
+    </div>
+    <div class="back-button">
+        <button onclick="goBack()" class="btn btn-secondary">Back</button>
+    </div>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back(); // Quay lại trang trước đó trong lịch sử duyệt web
+    }
+</script>

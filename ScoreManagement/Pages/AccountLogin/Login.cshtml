@@ -1,0 +1,168 @@
+﻿@page
+@model LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                                <div class="image-container">
+                                    <img src="~/asset/img/quanlydiemlogin.png" class="centered-image" height="300" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Xin chào!</h1>
+                                    </div>
+                                    <form method="post" class="login-form">
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                                        <div class="form-group">
+                                            <label asp-for="Input.Username">Tên đăng nhập</label>
+                                            <input asp-for="Input.Username" class="form-control" autofocus />
+                                            <span asp-validation-for="Input.Username" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="Input.Password">Mật khẩu</label>
+                                            <div class="input-group">
+                                                <input asp-for="Input.Password" type="password" class="form-control" id="passwordInput" />
+                                                <div class="input-group-append">
+                                                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword()">
+                                                        <i class="fas fa-eye" id="eyeIcon"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="captchaInput">Mã xác nhận</label>
+                                            <div class="d-flex align-items-center">
+                                                <img src="/AccountLogin/Login?handler=CaptchaImage" alt="Captcha" id="captchaImage" style="margin-right: 10px; border: 1px solid #ccc; border-radius: 4px;" />
+                                                <button type="button" class="btn btn-sm btn-secondary" onclick="refreshCaptcha()">🔁</button>
+                                            </div>
+                                            <input type="text" id="captchaInput" name="Input.captchaInput" class="form-control mt-2" required />
+                                        </div>
+
+
+                                        
+
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        </div>
+
+                                      
+
+                                    </form>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function refreshCaptcha() {
+            document.getElementById("captchaImage").src = '/AccountLogin/Login?handler=CaptchaImage&' + new Date().getTime();
+        }
+    </script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+    <script>
+        // Function to toggle password visibility
+        function togglePassword() {
+            var passwordInput = document.getElementById("passwordInput");
+            var eyeIcon = document.getElementById("eyeIcon");
+
+            // Toggle the input type between password and text
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";  // Show the password
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");  // Change the icon to the "eye-slash" icon
+            } else {
+                passwordInput.type = "password";  // Hide the password
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");  // Change the icon back to the "eye" icon
+            }
+        }
+    </script>
+</body>
+
+<style>
+    .bg-login-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Đảm bảo cột chiếm toàn bộ chiều cao của thẻ cha */
+        padding: 20px; /* Thêm khoảng cách để ảnh không sát lề */
+    }
+
+    .centered-image {
+        max-width: 100%; /* Đảm bảo ảnh tự động thu nhỏ theo chiều ngang */
+        max-height: 100%; /* Đảm bảo ảnh tự động thu nhỏ theo chiều dọc */
+        object-fit: contain; /* Giữ tỷ lệ ảnh */
+    }
+
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+</html>
+

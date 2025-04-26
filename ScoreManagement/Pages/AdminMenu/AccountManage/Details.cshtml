@@ -1,0 +1,63 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.AccountManage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Username
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.Username)
+        </dd>
+        <dt class="col-sm-2">
+            PasswordHash
+        </dt>
+        <dd class="col-sm-10">
+            <span id="passwordDisplay" data-password="@Model.Account.PasswordHash">
+                @("*".PadLeft(Model.Account.PasswordHash.Length, '*'))
+            </span>
+            <button type="button" onclick="togglePasswordVisibility()" style="border: none; background: none;">
+                <i id="togglePasswordIcon" class="fas fa-eye"></i>
+            </button>
+        </dd>
+        <dt class="col-sm-2">
+            Role
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.Role)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Account?.AccountId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
+@section Scripts {
+    <script>
+        function togglePasswordVisibility() {
+            const passwordDisplay = document.getElementById("passwordDisplay");
+            const toggleIcon = document.getElementById("togglePasswordIcon");
+
+            if (passwordDisplay.textContent.includes("*")) {
+                // Hiển thị mật khẩu thực từ thuộc tính data-password
+                passwordDisplay.textContent = passwordDisplay.getAttribute("data-password");
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                // Ẩn mật khẩu bằng cách thay thế bằng ***
+                passwordDisplay.textContent = "*".repeat(passwordDisplay.getAttribute("data-password").length);
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+}

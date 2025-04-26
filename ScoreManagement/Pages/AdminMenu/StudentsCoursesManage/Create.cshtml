@@ -1,0 +1,99 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.StudentsCoursesManage.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>StudentsCourse</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="StudentsCourse.ClassId" class="control-label"></label>
+                <select asp-for="StudentsCourse.ClassId" class="form-control" asp-items="ViewBag.ClassId" id="ClassIdDropdown"></select>
+            </div>
+            <div class="form-group">
+                <label for="ClassCode" class="control-label">Class Code</label>
+                <input type="text" class="form-control" id="ClassCode" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentsCourse.StudentId" class="control-label"></label>
+                <select asp-for="StudentsCourse.StudentId" class="form-control" asp-items="ViewBag.StudentId" id="StudentIdDropdown"></select>
+            </div>
+            <div class="form-group">
+                <label for="StudentCode" class="control-label">Student Code</label>
+                <input type="text" class="form-control" id="StudentCode" readonly />
+            </div>
+            <div class="form-group">
+                <label for="FullName" class="control-label">Full Name</label>
+                <input type="text" class="form-control" id="FullName" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentsCourse.CourseId" class="control-label"></label>
+                <select asp-for="StudentsCourse.CourseId" class ="form-control" asp-items="ViewBag.CourseId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentsCourse.SemesterId" class="control-label"></label>
+                <select asp-for="StudentsCourse.SemesterId" class ="form-control" asp-items="ViewBag.SemesterId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="StudentsCourse.LecturerId" class="control-label"></label>
+                <select asp-for="StudentsCourse.LecturerId" class ="form-control" asp-items="ViewBag.LecturerId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("StudentIdDropdown").addEventListener("change", function () {
+            const studentId = this.value;
+            console.log("Student ID selected:", studentId); // Kiểm tra giá trị ID đã chọn
+            if (studentId) {
+                fetch(`/AdminMenu/StudentsCoursesManage/Create?handler=StudentInfo&studentId=${studentId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log("Data received:", data); // Kiểm tra dữ liệu trả về
+                        const studentCodeField = document.getElementById("StudentCode");
+                        const fullNameField = document.getElementById("FullName");
+                        // Gán giá trị
+                        studentCodeField.value = data.studentCode || '';
+                        fullNameField.value = data.fullName || '';
+                    })
+                    .catch(error => console.error('Lỗi khi lấy thông tin sinh viên:', error));
+            } else {
+                document.getElementById("StudentCode").value = '';
+                document.getElementById("FullName").value = '';
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("ClassIdDropdown").addEventListener("change", function () {
+            const classId = this.value;
+            if (classId) {
+                fetch(`/AdminMenu/StudentsCoursesManage/Create?handler=ClassCode&classId=${classId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("ClassCode").value = data || '';
+                    })
+                    .catch(error => console.error('Lỗi khi lấy mã lớp:', error));
+            } else {
+                document.getElementById("ClassCode").value = '';
+            }
+        });
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

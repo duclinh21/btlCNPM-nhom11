@@ -1,0 +1,152 @@
+﻿@page "{StudentId:int?}"
+@model ScoreManagement.Pages.LectureMenu.StudentGradesModel
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+<link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Management</title>
+</head>
+
+<body>
+    <header>
+        <div id="wrapper">
+            <!-- Gọi Sidebar từ Partial View -->
+            @await Html.PartialAsync("_SidebarLecturer")
+
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
+
+                <!-- Main Content -->
+                <div id="content">
+
+                    <!-- Gọi Topbar từ Partial View -->
+                    @await Html.PartialAsync("_Topbar")
+
+                    <h2 class="text-center my-4">Điểm của Sinh Viên - @Model.StudentName</h2>
+
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["SuccessMessage"]
+                        </div>
+                    }
+
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["ErrorMessage"]
+                        </div>
+                    }
+
+                    @if (Model.StudentGrade != null)
+                    {
+                        <form method="post" class="bg-light p-4 rounded shadow" style="width: 100%;">
+                            <h4 class="mb-3">Cập Nhật Điểm</h4>
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Loại Điểm</th>
+                                        <th>Điểm</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <input type="hidden" asp-for="StudentId" value="@Model.StudentId" />
+                                    <input type="hidden" asp-for="CourseId" value="@Model.CourseId" />
+                                    <input type="hidden" asp-for="StudentGrade.StudentCourseId" value="@Model.StudentGrade.StudentCourseId" />
+
+                                    <tr>
+                                        <td>Assignment 1</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.Assignment1" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assignment 2</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.Assignment2" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assignment 3</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.Assignment3" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Progress Test 1</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.ProgressTest1" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Progress Test 2</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.ProgressTest2" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Progress Test 3</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.ProgressTest3" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Final Exam</td>
+                                        <td>
+                                            <input type="number" asp-for="StudentGrade.FinalExam" class="form-control" min="0" max="10" style="width: 100%;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Average Score</strong></td>
+                                        <td><strong>@Model.StudentGrade.GetFormattedAverageScore()</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Status</strong></td>
+                                        <td><strong>@Model.StudentGrade.Status</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="form-group">
+                                <button type="submit" asp-page-handler="Update" class="btn btn-success">Cập Nhật</button>
+                                <button type="submit" asp-page-handler="Delete" class="btn btn-danger">Xóa</button>
+                            </div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="alert alert-warning" role="alert">
+                            Không có điểm cho sinh viên này.
+                            <a href="@Url.Page("/LectureMenu/CreateGrade", new { StudentId = Model.StudentId, CourseId = Model.CourseId })" class="btn btn-primary ml-3">Tạo điểm</a>
+                        </div>
+                    }
+
+                    <!-- Back Button -->
+                    <div class="form-group mt-4">
+                        <a href="@Url.Page("/LectureMenu/LecturerDashboard", new { CourseId = Model.CourseId })" class="btn btn-secondary">Quay lại</a>
+                    </div>
+
+                </div>
+                <!-- End of Main Content -->
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+    </header>
+
+    <!-- Giữ nguyên các script cũ -->
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+    <script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Asset/js/demo/datatables-demo.js"></script>
+</body>
+</html>

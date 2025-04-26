@@ -1,0 +1,56 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.LecturersManage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Lecturer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            LecturerName
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.LecturerName)
+        </dd>
+        <dt class="col-sm-2">
+            Date of Birth
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Lecturer.Dob?.ToString("dd/MM/yyyy")
+        </dd>
+        <dt class="col-sm-2">
+            Giới tính
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.Lecturer.Gender == true ? "Nam" : Model.Lecturer.Gender == false ? "Nữ" : "Không xác định")
+        </dd>
+        <dt class="col-sm-2">
+            Address
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.Address)
+        </dd>
+        <dt class="col-sm-2">
+            PhoneNumber
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.PhoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            Account
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lecturer.Account.Username)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Lecturer?.LecturerId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

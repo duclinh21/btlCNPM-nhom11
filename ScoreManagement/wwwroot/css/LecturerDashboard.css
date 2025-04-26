@@ -1,0 +1,60 @@
+﻿/* LecturerDashboard.css */
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+.dashboard-header {
+    color: #4e73df;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.class-list .class-item {
+    transition: transform 0.2s;
+}
+
+    .class-list .class-item:hover {
+        transform: scale(1.02);
+    }
+
+.class-item .card {
+    background-color: #f8f9fc;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    color: #4e73df;
+    margin-bottom: 0;
+}
+
+.card-text {
+    color: #6c757d;
+}
+
+.selected-class-details h4,
+.selected-class-details h5 {
+    color: #4e73df;
+}
+
+.list-group-item {
+    border: 1px solid #e3e6f0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+    .list-group-item a.btn {
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+.alert-info {
+    background-color: #f8f9fc;
+    color: #5a5c69;
+    border: 1px solid #e3e6f0;
+    border-radius: 10px;
+}
