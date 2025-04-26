@@ -1,0 +1,73 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.AccountManage.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Username
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.Username)
+        </dd>
+        <dt class="col-sm-2">
+            PasswordHash
+        </dt>
+        <dd class="col-sm-10">
+            <span id="passwordDisplay" data-password="@Model.Account.PasswordHash">
+                @("*".PadLeft(Model.Account.PasswordHash.Length, '*'))
+            </span>
+            <button type="button" onclick="togglePasswordVisibility()" style="border: none; background: none;">
+                <i id="togglePasswordIcon" class="fas fa-eye"></i>
+            </button>
+        </dd>
+        <dt class="col-sm-2">
+            Role
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Account.Role)
+        </dd>
+    </dl>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
+
+    <form method="post">
+        <input type="hidden" asp-for="Account.AccountId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
+@section Scripts {
+    <script>
+        function togglePasswordVisibility() {
+            const passwordDisplay = document.getElementById("passwordDisplay");
+            const toggleIcon = document.getElementById("togglePasswordIcon");
+
+            if (passwordDisplay.textContent.includes("*")) {
+                // Hiển thị mật khẩu thực từ thuộc tính data-password
+                passwordDisplay.textContent = passwordDisplay.getAttribute("data-password");
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                // Ẩn mật khẩu bằng cách thay thế bằng ***
+                passwordDisplay.textContent = "*".repeat(passwordDisplay.getAttribute("data-password").length);
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+}

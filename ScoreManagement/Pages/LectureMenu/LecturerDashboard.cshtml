@@ -1,0 +1,83 @@
+﻿@page "{CourseId:int?}"
+@model ScoreManagement.Pages.LectureMenu.LecturerDashboardModel
+
+@{
+    ViewData["Title"] = "Lecturer Dashboard";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/LecturerDashboard.css" asp-append-version="true" />
+<link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+<link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+
+<div id="wrapper">
+    @await Html.PartialAsync("_SidebarLecturer")
+
+    <div class="content p-4">
+        @await Html.PartialAsync("_Topbar")
+
+        <div class="dashboard-header text-center my-4">
+            <h1 class="font-weight-bold">Dashboard Giảng Viên</h1>
+            <p class="text-muted">Dưới đây là danh sách các lớp bạn đang giảng dạy</p>
+        </div>
+
+        @if (Model.TeachingClasses.Any())
+        {
+            <div class="class-list row">
+                @foreach (var classItem in Model.TeachingClasses)
+                {
+                    <div class="class-item col-md-6 col-lg-4 mb-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <a asp-page="/LectureMenu/LecturerDashboard" asp-route-CourseId="@classItem.CourseId">
+                                    <h5 class="card-title font-weight-bold text-primary">
+                                        @classItem.ClassCode - @classItem.CourseCode
+                                    </h5>
+                                </a>
+                                <p class="card-text">Môn Học: @classItem.CourseName</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info">
+                <strong>Thông báo:</strong> Bạn không có lớp nào đang dạy.
+            </div>
+        }
+
+        @if (Model.SelectedClass != null)
+        {
+            <div class="selected-class-details mt-5">
+                <h4>Mã Lớp: @Model.SelectedClass.ClassCode - Môn: @Model.SelectedCourse?.CourseCode</h4>
+                <h5 class="mt-3">Danh Sách Sinh Viên</h5>
+                <ul class="list-group">
+                    @if (Model.Students.Any())
+                    {
+                        @foreach (var student in Model.Students)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>@student.StudentName - Mã Sinh Viên: @student.StudentCode</span>
+                                <a asp-page="/LectureMenu/StudentGrades" asp-route-StudentId="@student.StudentId" asp-route-CourseId="@Model.SelectedCourse?.CourseId"
+                                   class="btn btn-outline-primary btn-sm">Xem Điểm</a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li class="list-group-item">Không có sinh viên nào trong lớp.</li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+</div>

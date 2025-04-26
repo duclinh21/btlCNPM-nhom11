@@ -1,0 +1,97 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.AccountManage.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Account</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Account.Username" class="control-label"></label>
+                <input asp-for="Account.Username" class="form-control" />
+                <span asp-validation-for="Account.Username" class="text-danger"></span>
+            </div>
+
+            <div class="form-group position-relative">
+                <label asp-for="Account.PasswordHash" class="control-label"></label>
+                <div style="position: relative;">
+                    <input asp-for="Account.PasswordHash" id="passwordField" type="password" class="form-control pr-5" placeholder="Nhập mật khẩu" />
+                    <button type="button" onclick="togglePasswordVisibility('passwordField', 'togglePasswordIcon')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: none; background: none;">
+                        <i id="togglePasswordIcon" class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="Account.PasswordHash" class="text-danger"></span>
+            </div>
+
+            <div class="form-group position-relative">
+                <label for="confirmPasswordField" class="control-label">Nhập lại mật khẩu</label>
+                <div style="position: relative;">
+                    <input id="confirmPasswordField" name="confirmPasswordField" type="password" class="form-control pr-5" placeholder="Nhập lại mật khẩu" />
+                    <button type="button" onclick="togglePasswordVisibility('confirmPasswordField', 'toggleConfirmPasswordIcon')" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: none; background: none;">
+                        <i id="toggleConfirmPasswordIcon" class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <span id="confirmPasswordError" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Account.Role" class="control-label"></label>
+                <select asp-for="Account.Role" class="form-control" asp-items="@(ViewData["RoleOptions"] as List<SelectListItem>)"></select>
+                <span asp-validation-for="Account.Role" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" onclick="return validatePasswords()" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script>
+        function togglePasswordVisibility(fieldId, iconId) {
+            const passwordField = document.getElementById(fieldId);
+            const toggleIcon = document.getElementById(iconId);
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.classList.remove("fa-eye");
+                toggleIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                toggleIcon.classList.remove("fa-eye-slash");
+                toggleIcon.classList.add("fa-eye");
+            }
+        }
+
+        function validatePasswords() {
+            const password = document.getElementById("passwordField").value;
+            const confirmPassword = document.getElementById("confirmPasswordField").value;
+            const confirmPasswordError = document.getElementById("confirmPasswordError");
+
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = "Mật khẩu và Nhập lại mật khẩu không giống nhau.";
+                return false; // Ngăn chặn form submit
+            }
+
+            confirmPasswordError.textContent = "";
+            return true; // Cho phép form submit
+        }
+    </script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

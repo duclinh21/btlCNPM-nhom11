@@ -1,0 +1,65 @@
+﻿/* profile.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.back-button {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff; /* Màu xanh cho nút */
+}
+
+    .btn:hover {
+        background-color: #0056b3; /* Màu khi di chuột qua nút */
+    }
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #007bff;
+    margin-top: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.profile-info {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+    .profile-info p {
+        margin: 10px 0;
+        color: #555;
+    }
+
+.lecturer-info, .student-info {
+    background-color: #e9f5ff;
+    padding: 15px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}

@@ -1,0 +1,147 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.AccountManage.IndexModel
+@{
+    ViewData["Title"] = "Account Management";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassCourses Management</title>
+    <!-- Các link CSS cần thiết -->
+    <link href="~/Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="~/Asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="~/Asset/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    
+
+</head>
+<body>
+    <div id="wrapper">
+        @await Html.PartialAsync("_Sidebar")
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                @await Html.PartialAsync("_Topbar")
+
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Account Management</h1>
+
+                    <form method="get" class="form-inline mb-3">
+                        <input type="text" name="SearchTerm" class="form-control mr-2" placeholder="Search..." value="@Model.SearchTerm" />
+                        <select name="RoleFilter" class="form-control mr-2" onchange="this.form.submit()">
+                            <option value="">-- All Roles --</option>
+                            <option value="Admin" selected="@("Admin" == Model.RoleFilter)">Admin</option>
+                            <option value="Lecturer" selected="@("Lecturer" == Model.RoleFilter)">Lecturer</option>
+                            <option value="Student" selected="@("Student" == Model.RoleFilter)">Student</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                    <a href="javascript:void(0);" class="btn btn-primary mb-3" onclick="exportToExcel()">Export to Excel</a>
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["Message"]</div>
+                    }
+
+                    <a asp-page="Create" class="btn btn-success mb-3">Create New Account</a>
+
+                    <div class="table-responsive">
+                        <table id="dataTable" class="table table-bordered">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Avatar</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Role</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Account)
+                                {
+                                    <tr>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(item.Avatar))
+                                            {
+                                                <img src="~/uploads/@item.Avatar" width="50" height="50" class="rounded-circle" />
+                                            }
+                                            else
+                                            {
+                                                <span class="text-muted">No Avatar</span>
+                                            }
+                                        </td>
+                                        <td>@item.Username</td>
+                                        <td id="password-@item.AccountId" data-password="@item.PasswordHash">
+                                            @("*".PadLeft(item.PasswordHash.Length, '*'))
+                                        </td>
+                                        <td>@item.Role</td>
+                                        <td>
+                                            <button class="btn btn-secondary btn-sm" onclick="togglePassword(@item.AccountId, this)">Display</button>
+                                            <form id="resetForm-@item.AccountId" method="post" asp-page-handler="ResetPassword" asp-route-id="@item.AccountId" class="d-inline">
+                                                <button type="button" class="btn btn-warning btn-sm" onclick="confirmReset(@item.AccountId, '@item.Username')">Reset</button>
+                                            </form>
+                                            <a asp-page="./Edit" asp-route-id="@item.AccountId" class="btn btn-primary btn-sm">Edit</a>
+                                            <a asp-page="./Details" asp-route-id="@item.AccountId" class="btn btn-info btn-sm">Details</a>
+                                            <a asp-page="./Delete" asp-route-id="@item.AccountId" class="btn btn-danger btn-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function exportToExcel() {
+            window.location.href = '@Url.Page("Index", "ExportToExcel")';
+        }
+    </script>
+
+    <script>
+        function togglePassword(accountId, button) {
+            const cell = document.getElementById(`password-${accountId}`);
+            const realPassword = cell.getAttribute("data-password");
+            if (cell.textContent.includes("*")) {
+                cell.textContent = realPassword;
+                button.textContent = "Hide";
+            } else {
+                cell.textContent = "*".repeat(realPassword.length);
+                button.textContent = "Display";
+            }
+        }
+
+        function confirmReset(accountId, username) {
+            if (confirm(`Bạn có chắc chắn muốn đặt lại mật khẩu cho "${username}" về "2025"?`)) {
+                const form = document.getElementById(`resetForm-${accountId}`);
+                if (form) {
+                    form.submit();
+                }
+            }
+        }
+
+        // Kích hoạt DataTables
+        $(document).ready(function () {
+            $('#dataTable').DataTable({
+                "paging": true,  // Bật phân trang
+                "searching": true,  // Bật tìm kiếm
+                "ordering": true,  // Bật sắp xếp
+                "info": true,  // Hiển thị thông tin phân trang
+                "lengthMenu": [10, 25, 50, 75, 100]  // Số lượng bản ghi hiển thị mỗi trang
+            }); 
+        });
+    </script>
+
+    <script src="~/Asset/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/Asset/js/sb-admin-2.min.js"></script>
+    <script src="~/Asset/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Asset/js/demo/datatables-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿@page
+@model ScoreManagement.Pages.AdminMenu.StudentClassesManage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>StudentClass</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentClass.Class)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentClass.Class.ClassCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentClass.Student)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentClass.Student.StudentCode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.StudentClass?.StudentClassId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
